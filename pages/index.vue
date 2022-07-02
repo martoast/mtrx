@@ -29,6 +29,7 @@
       </b-navbar>
     </div>
     <b-row
+      v-if="!play"
       style="height: calc(100vh - 86px)"
       class="px-5"
       align-v="center"
@@ -60,18 +61,20 @@
                 >
                   Welcome to the Mtrxverse.
                 </h1>
-                <b-button
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  @click="onPlay"
-                  >Play</b-button
-                >
+                <b-button @click="onPlay">Play</b-button>
               </b-col>
             </b-row>
           </b-container>
         </b-card>
       </b-col>
     </b-row>
+    <b-embed
+      v-else
+      type="iframe"
+      aspect="21by9"
+      src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+      allowfullscreen
+    ></b-embed>
   </div>
 </template>
 
