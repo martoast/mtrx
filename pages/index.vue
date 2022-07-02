@@ -89,10 +89,11 @@
     </b-row>
     <b-container class="text-center m-0 p-0" fluid v-else>
       <video
-        style="height: calc(100vh - 86px)"
+        style="100%"
         width="100%"
         autoplay
         muted
+        controls
         playsinline
         webkit-playsinline
       >
@@ -119,8 +120,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-video::-webkit-media-controls-fullscreen-button {
-  display: none !important;
-}
-</style>
