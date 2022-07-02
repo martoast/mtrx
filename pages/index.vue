@@ -33,7 +33,6 @@
     >
       <b-col>
         <b-card
-          v-if="!play"
           class="justify-content-center"
           no-body
           style="
@@ -72,14 +71,6 @@
             </b-row>
           </b-container>
         </b-card>
-        <b-embed
-          v-else
-          type="iframe"
-          frameborder="0"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          allow="autoplay"
-          allowfullscreen
-        ></b-embed>
       </b-col>
     </b-row>
   </div>
@@ -90,14 +81,8 @@ export default {
   name: "IndexPage",
   layout: "main",
   data() {
-    return {
-      play: false,
-    };
+    return {};
   },
-  methods: {
-    onPlay() {
-      this.play = true;
-    },
-  },
+  methods: {},
 };
 </script>
