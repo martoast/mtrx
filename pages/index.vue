@@ -69,8 +69,9 @@
         <b-embed
           v-else
           type="iframe"
-          aspect="21by9"
-          src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+          frameborder="0"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+          allow="autoplay"
           allowfullscreen
         ></b-embed>
       </b-col>
