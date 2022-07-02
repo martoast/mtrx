@@ -74,13 +74,13 @@
                   Welcome to Mtrxverse.
                 </h1>
                 <b-button
+                  class="mt-3"
                   @click="onplayVideo"
-                  class="pt-4"
-                  variant="link"
+                  pill
+                  variant="primary"
                   size="lg"
-                >
-                  <b-icon icon="play-circle-fill" scale="3"> </b-icon>
-                </b-button>
+                  ><b-icon icon="play-circle-fill" scale="3"> </b-icon
+                ></b-button>
               </b-col>
             </b-row>
           </b-container>
@@ -88,7 +88,7 @@
       </b-col>
     </b-row>
     <b-container class="text-center m-0 p-0" fluid v-else>
-      <video height="100%" width="100%" autoplay controls muted>
+      <video style="height: calc(100vh - 86px)" width="100%" autoplay muted>
         <source src="/videos/mainvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -112,3 +112,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+</style>
