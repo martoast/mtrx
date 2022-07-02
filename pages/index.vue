@@ -73,7 +73,12 @@
                 >
                   Welcome to Mtrxverse.
                 </h1>
-                <b-button @click="onplayVideo" class="pt-4" variant="link">
+                <b-button
+                  @click="onplayVideo"
+                  class="pt-4"
+                  variant="link"
+                  size="lg"
+                >
                   <b-icon icon="play-circle-fill" scale="3"> </b-icon>
                 </b-button>
               </b-col>
