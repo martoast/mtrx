@@ -9,7 +9,7 @@
       overflow: auto;
     "
   >
-    <b-navbar class="position-sticky" variant="white" type="light">
+    <b-navbar toggleable="lg" type="light" variant="white">
       <b-navbar-brand href="#">
         <img
           src="/images/logo.svg"
@@ -17,15 +17,29 @@
           alt="logo "
         />
       </b-navbar-brand>
-      <b-navbar-nav>
-        <b-nav-item active style="font-weight: 600" href="#">Tech</b-nav-item>
-        <b-nav-item active style="font-weight: 600" href="#"
-          >Metaverse</b-nav-item
-        >
-        <b-nav-item active style="font-weight: 600" href="#">News</b-nav-item>
-      </b-navbar-nav>
+
+      <b-navbar-toggle
+        class="text-gray"
+        target="nav-collapse"
+      ></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item active style="font-weight: 600" href="#">
+            Tech
+          </b-nav-item>
+          <b-nav-item active style="font-weight: 600" href="#">
+            Metaverse
+          </b-nav-item>
+          <b-nav-item active style="font-weight: 600" href="#">
+            News
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
     </b-navbar>
+
     <b-row
+      v-if="!play_video"
       style="height: calc(100vh - 86px)"
       class="px-5"
       align-v="center"
@@ -46,7 +60,7 @@
         >
           <b-container fluid>
             <b-row align-h="center" align-v="center">
-              <b-col cols="12" md="6" sm="12" class="text-center">
+              <b-col class="text-center">
                 <span style="font-weight: 800; font-size: 24px">MTRX Inc.</span>
                 <h1
                   style="
@@ -59,20 +73,21 @@
                 >
                   Enter the Mtrxverse.
                 </h1>
-              </b-col>
-              <b-col class="py-2" cols="12" md="6" sm="12">
-                <b-embed
-                  type="iframe"
-                  aspect="16by9"
-                  src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                  allowfullscreen
-                ></b-embed>
+                <b-button @click="onplayVideo" class="pt-4" variant="link">
+                  <b-icon icon="play-circle-fill" scale="3"> </b-icon>
+                </b-button>
               </b-col>
             </b-row>
           </b-container>
         </b-card>
       </b-col>
     </b-row>
+    <b-container class="text-center m-0 p-0" fluid v-else>
+      <video height="100%" width="100%" autoplay controls muted>
+        <source src="/videos/mainvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </b-container>
   </div>
 </template>
 
@@ -81,8 +96,14 @@ export default {
   name: "IndexPage",
   layout: "main",
   data() {
-    return {};
+    return {
+      play_video: false,
+    };
   },
-  methods: {},
+  methods: {
+    onplayVideo() {
+      this.play_video = true;
+    },
+  },
 };
 </script>
