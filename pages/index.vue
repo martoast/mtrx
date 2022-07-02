@@ -88,9 +88,16 @@
       </b-col>
     </b-row>
     <b-container class="text-center m-0 p-0" fluid v-else>
-      <video style="height: calc(100vh - 86px)" width="100%" autoplay muted>
-        <source src="/videos/mainvideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+      <video
+        style="height: calc(100vh - 86px)"
+        width="100%"
+        autoplay
+        muted
+        playsinline
+        webkit-playsinline
+      >
+        <source src="/videos/mainvideo.mp4" type="video/mp4" preload="auto" />
+        Your browser does not support video
       </video>
     </b-container>
   </div>
