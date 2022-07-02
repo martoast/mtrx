@@ -71,7 +71,7 @@
                     color: #5c5858;
                   "
                 >
-                  Enter the Mtrxverse.
+                  Welcome to Mtrxverse.
                 </h1>
                 <b-button @click="onplayVideo" class="pt-4" variant="link">
                   <b-icon icon="play-circle-fill" scale="3"> </b-icon>
