@@ -96,11 +96,13 @@
         aliqua.
       </p>
     </div>
-    <VueTimeline
-      ref="timeline"
-      :timeline-items="timelineItems"
-      :individualClasses="true"
-    />
+    <client-only placeholder="loading...">
+      <VueTimeline
+        ref="timeline"
+        :timeline-items="timelineItems"
+        :individualClasses="true"
+      />
+    </client-only>
   </b-container>
 </template>
 
@@ -137,10 +139,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    document.querySelector("body").style.backgroundColor = "#000000";
-    document.querySelector("div.timeline-date").style.color = "transparent";
-  },
   methods: {
     onplayVideo() {
       this.play_video = true;
@@ -165,5 +163,8 @@ export default {
 }
 .timeline-date {
   color: transparent;
+}
+.body {
+  background-color: #000000;
 }
 </style>
