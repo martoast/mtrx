@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark" style="background-color: #000000">
       <b-navbar-brand href="#">
         <img
-          src="/images/logo.svg"
+          src="/images/logo.png"
           class="d-inline-block align-top"
           alt="logo "
         />
@@ -53,7 +53,7 @@
       </video>
     </div>
 
-    <div class="pb-3">
+    <div class="pb-5">
       <b-card
         no-body
         class="text-center bg-secondary text-white"
@@ -84,20 +84,65 @@
         </b-row>
       </b-card>
     </div>
+
+    <div class="pb-5 text-white">
+      <h1 style="font-weight: 700; font-size: 36px">ROADMAP TO METAWEEK</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. re et dolore magna
+        aliqua. re et dolore magna aliqua. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. re et dolore magna aliqua. re et dolore magna
+        aliqua.
+      </p>
+    </div>
+    <VueTimeline
+      ref="timeline"
+      :timeline-items="timelineItems"
+      :individualClasses="true"
+    />
   </b-container>
 </template>
 
 <script>
+import VueTimeline from "bs-vue-timeline";
 export default {
   name: "IndexPage",
   layout: "main",
+  components: {
+    VueTimeline,
+  },
   data() {
     return {
       play_video: false,
+      timelineItems: [
+        {
+          title: "Milestone 1",
+          subtitle: "System Engineer",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          image: "logo.png",
+        },
+        {
+          title: "Milestone 2",
+          subtitle: "Programmer",
+          content:
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          image: "logo.png",
+        },
+        {
+          title: "Milestone 3",
+          subtitle: "Internship / Volunteer",
+          content:
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          image: "logo.png",
+        },
+      ],
     };
   },
   mounted() {
     document.querySelector("body").style.backgroundColor = "#000000";
+    document.querySelector("div.timeline-date").style.color = "transparent";
   },
   methods: {
     onplayVideo() {
@@ -110,5 +155,18 @@ export default {
 <style>
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+:root {
+  --bvt-primary-color: #bc02d1;
+  --bvt-bg-secondary: #ddd;
+  --bvt-timeline-color: #aaa;
+  --bvt-timeline-text-color: #000000;
+  --bvt-border-color: var(--bvt-timeline-color);
+  --bvt-duration-color: var(--bvt-primary-color);
+  --bvt-box-shadow1: 0 1px 6px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.timeline-date {
+  color: transparent;
 }
 </style>
