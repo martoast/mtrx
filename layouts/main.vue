@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100">
+  <b-container fluid style="background-color: #000000">
     <nuxt />
-  </div>
+  </b-container>
 </template>

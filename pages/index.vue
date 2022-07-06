@@ -1,15 +1,6 @@
 <template>
-  <div
-    style="
-      background-image: url('/images/background.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100vh;
-      overflow: auto;
-    "
-  >
-    <b-navbar toggleable="lg" type="light" variant="white">
+  <b-container>
+    <b-navbar toggleable="lg" type="dark" style="background-color: #000000">
       <b-navbar-brand href="#">
         <img
           src="/images/logo.svg"
@@ -19,7 +10,8 @@
       </b-navbar-brand>
 
       <b-navbar-toggle
-        class="text-gray"
+        style="border-color: transparent; color: white"
+        class="text-white"
         target="nav-collapse"
       ></b-navbar-toggle>
 
@@ -38,56 +30,15 @@
       </b-collapse>
     </b-navbar>
 
-    <b-row
-      v-if="!play_video"
-      style="height: calc(100vh - 86px)"
-      class="px-5"
-      align-v="center"
-      align-h="center"
+    <div
+      style="
+        border-radius: 20px;
+        margin-bottom: 50px;
+        margin-top: 18px;
+        overflow: hidden;
+        position: relative;
+      "
     >
-      <b-col>
-        <b-card
-          class="justify-content-center"
-          no-body
-          style="
-            background-color: #ddd;
-            border: none;
-            color: black;
-            margin: 4px 2px;
-            border-radius: 16px;
-            height: 50vh;
-          "
-        >
-          <b-container fluid>
-            <b-row align-h="center" align-v="center">
-              <b-col class="text-center">
-                <span style="font-weight: 800; font-size: 24px">MTRX Inc.</span>
-                <h1
-                  style="
-                    font-family: 'Open Sans';
-                    font-style: normal;
-                    font-weight: 800;
-                    font-size: 51px;
-                    color: #5c5858;
-                  "
-                >
-                  Welcome to Mtrxverse.
-                </h1>
-                <b-button
-                  class="mt-3"
-                  @click="onplayVideo"
-                  pill
-                  variant="primary"
-                  size="lg"
-                  ><b-icon icon="play-circle-fill" scale="3"> </b-icon
-                ></b-button>
-              </b-col>
-            </b-row>
-          </b-container>
-        </b-card>
-      </b-col>
-    </b-row>
-    <b-container class="text-center m-0 p-0" fluid v-else>
       <video
         style="100%"
         width="100%"
@@ -100,8 +51,40 @@
         <source src="/videos/mainvideo.mp4" type="video/mp4" preload="auto" />
         Your browser does not support video
       </video>
-    </b-container>
-  </div>
+    </div>
+
+    <div class="pb-3">
+      <b-card
+        no-body
+        class="text-center bg-secondary text-white"
+        style="border-radius: 25px"
+      >
+        <b-row align-v="center" align-h="center" class="py-4">
+          <b-col cols="12" md="6" sm="12">
+            <h1 style="font-weight: 800; font-size: 40px">Powered By Klaytn</h1>
+            <p class="px-3">
+              Klaytn-contracts` is an open source smart contract library which
+              provides reusable building blocks for developers to easily use in
+              their Klaytn based projects. It contains a full suite of
+              standardized smart contract interfaces, libraries, and
+              implementations for quick and safe inheritance and development.
+              Below are a few items which are widely used and included in the
+              klaytn-contracts:
+            </p>
+          </b-col>
+
+          <b-col cols="12" md="6" sm="12">
+            <b-img
+              src="/images/klaytn.png"
+              style="max-width: 300px"
+              fluid
+              alt="Fluid image"
+            ></b-img>
+          </b-col>
+        </b-row>
+      </b-card>
+    </div>
+  </b-container>
 </template>
 
 <script>
@@ -113,6 +96,9 @@ export default {
       play_video: false,
     };
   },
+  mounted() {
+    document.querySelector("body").style.backgroundColor = "#000000";
+  },
   methods: {
     onplayVideo() {
       this.play_video = true;
@@ -120,3 +106,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+</style>
