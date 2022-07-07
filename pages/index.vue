@@ -53,56 +53,103 @@
       </video>
     </div>
 
-    <div class="pb-5">
-      <b-card
-        no-body
-        class="text-center bg-secondary text-white"
-        style="border-radius: 25px"
-      >
-        <b-row align-v="center" align-h="center" class="py-4">
-          <b-col cols="12" md="6" sm="12">
-            <h1 style="font-weight: 800; font-size: 40px">Powered By Klaytn</h1>
-            <p class="px-3">
-              Klaytn-contracts` is an open source smart contract library which
-              provides reusable building blocks for developers to easily use in
-              their Klaytn based projects. It contains a full suite of
-              standardized smart contract interfaces, libraries, and
-              implementations for quick and safe inheritance and development.
-              Below are a few items which are widely used and included in the
-              klaytn-contracts:
-            </p>
-          </b-col>
-
-          <b-col cols="12" md="6" sm="12">
+    <div style="background: rgba(161, 102, 233, 0.3); border-radius: 25px">
+      <b-row class="pb-5" align-v="center">
+        <b-col cols="12" md="6" sm="12">
+          <div class="p-2">
             <b-img
-              src="/images/klaytn.png"
-              style="max-width: 300px"
+              style="border-radius: 25px"
+              src="https://picsum.photos/1024/400/?image=41"
               fluid
-              alt="Fluid image"
+              alt="Responsive image"
             ></b-img>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
+          </div>
+        </b-col>
+        <b-col cols="12" md="6" sm="12">
+          <h1
+            class="text-center"
+            style="font-weight: 700; font-size: 36px; color: #43ee9c"
+          >
+            Listen to the Metaverse
+          </h1>
+          <b-container style="background-color: #c4c4c4">
+            <h3 class="text-white p-3">
+              A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
+            </h3>
+          </b-container>
+        </b-col>
+      </b-row>
+      <div class="pb-5">
+        <b-card
+          no-body
+          class="text-white align-items-center"
+          style="border-radius: 25px; background: rgba(94, 94, 94, 0.5)"
+        >
+          <b-row align-v="center" align-h="center" class="py-4 w-100">
+            <b-col class="ml-md-auto" cols="12" md="6" sm="12">
+              <h1 style="font-weight: 800; color: rgba(251, 119, 208, 1)">
+                Powered By Klaytn
+              </h1>
+              <p>
+                Klaytn-contracts` is an open source smart contract library which
+                provides reusable building blocks for developers to easily use
+                in their Klaytn based projects. It contains a full suite of
+                standardized smart contract interfaces, libraries, and
+                implementations for quick and safe inheritance and development.
+                Below are a few items which are widely used and included in the
+                klaytn-contracts:
+              </p>
+              <b-button
+                pill
+                class="border-0"
+                style="
+                  background: rgb(94, 162, 239);
+                  background: linear-gradient(
+                    0deg,
+                    rgba(94, 162, 239, 1) 6.77%,
+                    rgba(209, 45, 156, 0.8057598039215687) 100%
+                  );
+                "
+                >Read More About Klaytn</b-button
+              >
+            </b-col>
 
-    <div class="pb-5 text-white">
-      <h1 style="font-weight: 700; font-size: 36px">ROADMAP TO METAWEEK</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. re et dolore magna
-        aliqua. re et dolore magna aliqua. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. re et dolore magna aliqua. re et dolore magna
-        aliqua.
-      </p>
+            <b-col class="ml-auto" cols="12" md="4" sm="12">
+              <b-img
+                src="/images/klaytn.png"
+                style="max-width: 300px"
+                fluid
+                alt="Fluid image"
+              ></b-img>
+            </b-col>
+          </b-row>
+        </b-card>
+      </div>
+
+      <div class="pb-5 text-white">
+        <h1
+          class="text-center"
+          style="font-weight: 700; font-size: 36px; color: #43ee9c"
+        >
+          ROADMAP TO METAWEEK
+        </h1>
+        <div class="text-center">
+          <b-img
+            src="/images/timeline.png"
+            fluid
+            alt="Responsive image"
+          ></b-img>
+        </div>
+      </div>
+
+      <!-- <client-only placeholder="loading...">
+        <VueTimeline
+          ref="timeline"
+          :timeline-items="timelineItems"
+          :individualClasses="true"
+        />
+      </client-only> -->
     </div>
-    <client-only placeholder="loading...">
-      <VueTimeline
-        ref="timeline"
-        :timeline-items="timelineItems"
-        :individualClasses="true"
-      />
-    </client-only>
   </b-container>
 </template>
 
