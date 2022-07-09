@@ -223,32 +223,34 @@
         class="text-white align-items-center"
         style="border-radius: 25px; background-color: gray"
       >
-        <h1
-          class="text-center text-white"
-          style="font-weight: 700; font-size: 64px"
-        >
-          Powered By Klaytn
-        </h1>
-        <b-row align-v="center" align-h="center" class="py-4 w-100">
-          <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-            <p style="font-weight: 700; font-size: 22px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore
-            </p>
-          </b-col>
+        <div class="p-4">
+          <h1
+            class="text-center text-white"
+            style="font-weight: 700; font-size: 64px"
+          >
+            Powered By Klaytn
+          </h1>
+          <b-row align-v="center" align-h="center" class="py-4 w-100">
+            <b-col class="ml-md-auto" cols="12" md="6" sm="12">
+              <p style="font-weight: 700; font-size: 22px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore
+              </p>
+            </b-col>
 
-          <b-col class="ml-auto" cols="12" md="4" sm="12">
-            <b-img
-              src="/images/klaytn.png"
-              style="max-width: 300px"
-              fluid
-              alt="Fluid image"
-            ></b-img>
-          </b-col>
-        </b-row>
+            <b-col class="ml-auto" cols="12" md="4" sm="12">
+              <b-img
+                src="/images/klaytn.png"
+                style="max-width: 300px"
+                fluid
+                alt="Fluid image"
+              ></b-img>
+            </b-col>
+          </b-row>
+        </div>
       </b-card>
     </div>
 
