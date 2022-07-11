@@ -47,14 +47,16 @@
         >
         </b-img-lazy>
         <b-button
-          style="position: absolute; bottom: 49%; left: 35%"
-          class="mt-3"
+          style="
+            position: absolute;
+            bottom: 49%;
+            left: 35%;
+            background-color: rgba(7, 252, 252, 1);
+          "
           @click="onplayVideo"
-          pill
-          variant="primary"
-          size="md"
-          ><b-icon icon="play-circle-fill" scale="3"> </b-icon
-        ></b-button>
+        >
+          <b-icon icon="play-fill" scale="2"> </b-icon>
+        </b-button>
       </div>
 
       <div v-else>
@@ -73,7 +75,7 @@
       </div>
     </div>
 
-    <div style="background-color: gray; border-radius: 42px">
+    <div style="border-radius: 42px">
       <b-row class="pb-5 p-3" align-v="center">
         <b-col cols="12" md="6" sm="12">
           <div class="p-2">
