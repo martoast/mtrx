@@ -39,18 +39,38 @@
         position: relative;
       "
     >
-      <video
-        style="100%"
-        width="100%"
-        autoplay
-        muted
-        controls
-        playsinline
-        webkit-playsinline
-      >
-        <source src="/videos/mainvideo.mp4" type="video/mp4" preload="auto" />
-        Your browser does not support video
-      </video>
+      <div v-if="!play_video">
+        <b-img-lazy
+          src="/images/header.png"
+          fluid
+          style="position: relative; max-height: 592px; width: 100%"
+        >
+        </b-img-lazy>
+        <b-button
+          style="position: absolute; bottom: 49%; left: 49%"
+          class="mt-3"
+          @click="onplayVideo"
+          pill
+          variant="primary"
+          size="md"
+          ><b-icon icon="play-circle-fill" scale="3"> </b-icon
+        ></b-button>
+      </div>
+
+      <div v-else>
+        <video
+          style="100%"
+          width="100%"
+          autoplay
+          muted
+          controls
+          playsinline
+          webkit-playsinline
+        >
+          <source src="/videos/mainvideo.mp4" type="video/mp4" preload="auto" />
+          Your browser does not support video
+        </video>
+      </div>
     </div>
 
     <div style="background-color: gray; border-radius: 42px">
@@ -78,7 +98,8 @@
           <h2 class="text-white pb-3" style="font-weight: 800; font-size: 30px">
             SIGN UP NOW
           </h2>
-          <h4 class="text-white pb-3">134 days, 09 hours 32 minutes</h4>
+          <!-- <h4 class="text-white pb-3">134 days, 09 hours 32 minutes</h4> -->
+          <h4 class="text-white pb-3" id="timer"></h4>
           <b-form inline @submit="onSubmit" @reset="onReset">
             <b-form-input
               style="background-color: transparent; border-color: #6e0095"
@@ -113,10 +134,22 @@
         >
           <b-row align-v="center" align-h="center" class="py-4 w-100">
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-              <h1 style="font-weight: 800; color: rgba(67, 238, 156, 1)">
+              <h1
+                style="
+                  font-weight: 800;
+                  color: rgba(67, 238, 156, 1);
+                  margin: 0px;
+                "
+              >
                 IT’S YOUR WORLD
               </h1>
-              <h1 style="font-weight: 800; color: rgba(67, 238, 156, 1)">
+              <h1
+                style="
+                  font-weight: 800;
+                  color: rgba(67, 238, 156, 1);
+                  margin: 0px;
+                "
+              >
                 AND ITS YOUR STAGE
               </h1>
 
@@ -128,8 +161,8 @@
                 airdrops, to brand sponsored immersive activations, to full on
                 music festivals with custom effects the MTRXVERSE is the
                 ultimate home for the next generation of artists to directly
-                connect with their fans around the globe in a whole new way.
-                 You no longer have to BE THERE to BE THERE. Enter the MTRXVerse
+                connect with their fans around the globe in a whole new way. You
+                no longer have to BE THERE to BE THERE. Enter the MTRXVerse
               </p>
               <b-button
                 pill
@@ -198,20 +231,35 @@
           <b-card
             v-for="item in news"
             :key="item.id"
-            img-src="https://picsum.photos/300/300/?image=41"
-            img-alt="Image"
-            img-top
             style="background-color: #07fcfc !important"
+            no-body
           >
-            <b-card-title>
-              {{ item.title }}
-            </b-card-title>
-            <b-card-text>
-              {{ item.content }}
-            </b-card-text>
-            <template #footer>
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </template>
+            <div class="p-1">
+              <b-card-img
+                class="blog-img"
+                src="https://picsum.photos/300/300/?image=41"
+                alt="Image"
+              >
+              </b-card-img>
+              <a
+                href="#"
+                style="
+                  position: absolute;
+                  z-index: 10000;
+                  right: 2rem;
+                  top: 1rem;
+                  color: black;
+                "
+                ><b-icon scale="2" icon="arrow-right"></b-icon
+              ></a>
+
+              <b-card-title class="pt-2">
+                {{ item.title }}
+              </b-card-title>
+              <b-card-text>
+                {{ item.content }}
+              </b-card-text>
+            </div>
           </b-card>
         </b-card-group>
       </div>
@@ -226,10 +274,18 @@
         <div class="p-4">
           <h1
             class="text-center text-white"
-            style="font-weight: 700; font-size: 64px"
+            style="font-weight: 700; font-size: 64px; margin: 0px"
           >
-            Powered By Klaytn
+            Powered By
           </h1>
+
+          <h1
+            class="text-center text-white"
+            style="font-weight: 700; font-size: 64px; margin: 0px"
+          >
+            Klaytn
+          </h1>
+
           <b-row align-v="center" align-h="center" class="py-4 w-100">
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
               <p style="font-weight: 700; font-size: 22px">
@@ -254,9 +310,79 @@
       </b-card>
     </div>
 
+    <b-container class="py-5">
+      <b-row align-v="center">
+        <b-col col md="5" sm="12">
+          <div class="d-flex">
+            <div>
+              <b-img src="/images/footerlogo.svg"></b-img>
+              <p class="text-white" style="font-weight: 700; font-size: 24px">
+                The Bridge Between Metaverse and IRL Events.
+              </p>
+            </div>
+            <div>
+              <b-list-group>
+                <b-list-group-item
+                  href="#"
+                  class="border-0 text-white"
+                  style="background-color: transparent"
+                >
+                  Tech
+                </b-list-group-item>
+
+                <b-list-group-item
+                  href="#"
+                  class="border-0 text-white"
+                  style="background-color: transparent"
+                >
+                  Metaverse
+                </b-list-group-item>
+
+                <b-list-group-item
+                  href="#"
+                  class="border-0 text-white"
+                  style="background-color: transparent"
+                >
+                  News
+                </b-list-group-item>
+              </b-list-group>
+            </div>
+          </div>
+        </b-col>
+        <b-col col md="7" sm="12">
+          <h1
+            class="text-white text-center"
+            style="font-weight: 700; font-size: 43px"
+          >
+            ENTER THE MTRX
+          </h1>
+          <b-form
+            inline
+            @submit="onSubmit"
+            @reset="onReset"
+            style="justify-content: center"
+          >
+            <!-- Using components -->
+            <b-input-group class="mt-3">
+              <b-form-input
+                placeholder="Your email address"
+                v-model="form.email"
+                :state="emailState"
+                required
+                type="email"
+              ></b-form-input>
+              <b-input-group-append>
+                <b-button variant="dark">Send email</b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </b-form>
+        </b-col>
+      </b-row>
+    </b-container>
+
     <div class="d-none d-md-flex justify-content-center">
       <b-btn variant="link">
-        <b-img src="/images/social/youtube.svg"></b-img>
+        <b-img src="/images/social/youtube.svg" fluid></b-img>
       </b-btn>
       <b-btn variant="link">
         <b-img src="/images/social/facebook.svg"></b-img>
@@ -316,24 +442,58 @@ export default {
           id: 1,
           title: "title",
           subtitle: "subtitle",
-          content: "blah",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
         {
           id: 2,
           title: "title",
           subtitle: "subtitle",
-          content: "blah",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
         {
           id: 3,
           title: "title",
           subtitle: "subtitle",
-          content: "blah",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
       ],
       slide: 0,
       sliding: null,
     };
+  },
+  mounted() {
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("timer").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   },
   computed: {
     emailState() {
@@ -397,5 +557,16 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.blog-img {
+  position: relative;
+}
+
+.blog-img > a {
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
 }
 </style>
