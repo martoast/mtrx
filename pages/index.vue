@@ -47,7 +47,7 @@
         >
         </b-img-lazy>
         <b-button
-          style="position: absolute; bottom: 49%; left: 49%"
+          style="position: absolute; bottom: 49%; left: 35%"
           class="mt-3"
           @click="onplayVideo"
           pill
