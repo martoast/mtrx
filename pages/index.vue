@@ -435,13 +435,10 @@
 </template>
 
 <script>
-import VueTimeline from "bs-vue-timeline";
 export default {
   name: "IndexPage",
   layout: "main",
-  components: {
-    VueTimeline,
-  },
+
   data() {
     return {
       play_video: false,
