@@ -53,6 +53,7 @@
             left: 35%;
             background-color: rgba(7, 252, 252, 1);
           "
+          size="lg"
           @click="onplayVideo"
         >
           <b-icon icon="play-fill" scale="2"> </b-icon>
@@ -259,11 +260,7 @@
             no-body
           >
             <div class="p-1">
-              <b-card-img
-                class="blog-img"
-                src="https://picsum.photos/300/300/?image=41"
-                alt="Image"
-              >
+              <b-card-img class="blog-img" :src="item.image" alt="Image">
               </b-card-img>
               <a
                 href="#"
@@ -448,26 +445,7 @@ export default {
   data() {
     return {
       play_video: false,
-      timelineItems: [
-        {
-          title: "Milestone 1",
-          subtitle: "System Engineer",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        },
-        {
-          title: "Milestone 2",
-          subtitle: "Programmer",
-          content:
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        },
-        {
-          title: "Milestone 3",
-          subtitle: "Internship / Volunteer",
-          content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        },
-      ],
+
       form: {
         email: "",
       },
@@ -476,6 +454,8 @@ export default {
           id: 1,
           title: "title of the blog",
           subtitle: "subtitle",
+          image:
+            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
@@ -483,6 +463,8 @@ export default {
           id: 2,
           title: "title of the blog",
           subtitle: "subtitle",
+          image:
+            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
@@ -490,6 +472,8 @@ export default {
           id: 3,
           title: "title of the blog",
           subtitle: "subtitle",
+          image:
+            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
