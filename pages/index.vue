@@ -189,6 +189,7 @@
 
             <b-button
               :disabled="!emailState"
+              block
               class="d-block d-md-none mt-3"
               style="background-color: #00c0f9; border-color: #00c0f9"
               >Enter the MTRX
@@ -347,7 +348,7 @@
           style="padding-right: 1rem"
         ></b-img-lazy>
       </div>
-      <div class="pb-5">
+      <div>
         <b-img-lazy
           fluid
           src="/images/metamansion.png"
@@ -375,7 +376,9 @@
       </div>
     </div>
 
-    <h2 class="text-center text-white py-3" style="font-weight: 800">NEWS</h2>
+    <h2 class="text-center text-white pt-5 pb-3" style="font-weight: 800">
+      NEWS
+    </h2>
     <b-card-group class="p-3" deck>
       <b-card
         v-for="item in news"
@@ -562,8 +565,18 @@
         </b-col>
         <b-col col md="7" sm="12">
           <h2
-            class="text-white text-center pb-3"
-            style="font-weight: 800; text-decoration: underline"
+            class="d-none d-md-block text-white text-center pb-3"
+            style="font-weight: 700; text-decoration: underline"
+          >
+            JOIN THE WAITLIST
+          </h2>
+          <h2
+            class="d-block d-md-none text-white pb-3"
+            style="
+              font-weight: 700;
+              font-size: 20px;
+              text-decoration: underline;
+            "
           >
             JOIN THE WAITLIST
           </h2>
@@ -592,6 +605,7 @@
 
             <b-button
               :disabled="!emailState"
+              block
               class="d-block d-md-none mt-3"
               style="background-color: #00c0f9; border-color: #00c0f9"
               >Enter the MTRX
