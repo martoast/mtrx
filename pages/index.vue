@@ -33,7 +33,7 @@
     <div
       style="
         border-radius: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         margin-top: 18px;
         overflow: hidden;
         position: relative;
@@ -75,7 +75,18 @@
       </div>
     </div>
 
-    <div style="border-radius: 42px">
+    <div
+      style="
+        background: linear-gradient(
+          180deg,
+          rgba(121, 102, 233, 0.0270833) 0.01%,
+          rgba(94, 162, 239, 0.072) 0.02%,
+          rgba(209, 45, 156, 0.4) 100%
+        );
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 42px;
+      "
+    >
       <b-row class="pb-5 p-3" align-v="center">
         <b-col cols="12" md="6" sm="12">
           <div class="p-2">
@@ -87,7 +98,7 @@
             ></b-img>
           </div>
         </b-col>
-        <b-col cols="12" md="6" sm="12">
+        <b-col class="pt-3" cols="12" md="6" sm="12">
           <h1
             class="pb-3"
             style="font-weight: 800; font-size: 30px; color: #43ee9c"
@@ -175,31 +186,40 @@
             </b-col>
 
             <b-col class="ml-auto py-3" cols="12" md="4" sm="12">
-              <b-img
-                src="/images/banner-logo.png"
-                style="max-width: 300px"
+              <b-img-lazy
+                src="/images/banner-logo.svg"
                 fluid
                 alt="Fluid image"
-              ></b-img>
+              ></b-img-lazy>
             </b-col>
           </b-row>
         </b-card>
       </div>
 
       <div class="pb-5 text-white">
-        <h1
-          class="text-center"
-          style="font-weight: 700; font-size: 36px; color: #43ee9c"
-        >
+        <b-img-lazy
+          fluid
+          class="pb-1 center-img"
+          style="max-width: 250px"
+          src="/images/metafest.svg"
+        ></b-img-lazy>
+        <h1 class="text-center" style="font-weight: 700; color: #43ee9c">
           ROADMAP
         </h1>
 
         <b-img
-          class="center-img"
-          style="width: 75%; padding-left: 1rem"
+          class="center-img d-none d-md-block"
           src="/images/timeline.png"
-          fluid
-          alt="Responsive image"
+          fluid-grow
+          alt="roadmap-image"
+          style="padding-right: 3rem"
+        ></b-img>
+        <b-img
+          class="center-img d-block d-md-none"
+          src="/images/timeline.png"
+          fluid-grow
+          alt="roadmap-image"
+          style="padding-right: 1rem"
         ></b-img>
       </div>
       <div class="pb-5">
@@ -226,10 +246,10 @@
       </div>
 
       <div>
-        <h1 class="text-center text-white pb-5" style="font-weight: 700">
+        <h1 class="text-center text-white pb-3" style="font-weight: 700">
           NEWS
         </h1>
-        <b-card-group deck>
+        <b-card-group class="p-3" deck>
           <b-card
             v-for="item in news"
             :key="item.id"
@@ -276,16 +296,16 @@
         <div class="p-4">
           <h1
             class="text-center text-white"
-            style="font-weight: 700; font-size: 64px; margin: 0px"
+            style="font-weight: 700; margin: 0px"
           >
-            Powered By
+            POWERED BY
           </h1>
 
           <h1
             class="text-center text-white"
-            style="font-weight: 700; font-size: 64px; margin: 0px"
+            style="font-weight: 700; margin: 0px"
           >
-            Klaytn
+            KLAYTN
           </h1>
 
           <b-row align-v="center" align-h="center" class="py-4 w-100">
@@ -442,21 +462,21 @@ export default {
       news: [
         {
           id: 1,
-          title: "title",
+          title: "title of the blog",
           subtitle: "subtitle",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
         {
           id: 2,
-          title: "title",
+          title: "title of the blog",
           subtitle: "subtitle",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
         {
           id: 3,
-          title: "title",
+          title: "title of the blog",
           subtitle: "subtitle",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
