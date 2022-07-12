@@ -250,7 +250,13 @@
               <b-button
                 pill
                 class="border-0"
-                style="background-color: #00c0f9; border-color: #00c0f9"
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    rgba(94, 162, 239, 0.8) 0%,
+                    rgba(209, 45, 156, 0.064) 100%
+                  );
+                "
                 >LEARN MORE</b-button
               >
             </b-col>
@@ -311,7 +317,13 @@
               <b-button
                 pill
                 class="border-0"
-                style="background-color: #00c0f9; border-color: #00c0f9"
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    rgba(94, 162, 239, 0.8) 0%,
+                    rgba(209, 45, 156, 0.064) 100%
+                  );
+                "
                 >LEARN MORE</b-button
               >
             </b-col>
@@ -350,7 +362,7 @@
       </div>
     </div>
 
-    <div class="pt-3">
+    <div class="py-3">
       <b-img-lazy
         fluid
         src="/images/metamansion.png"
@@ -367,12 +379,12 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
-        <b-carousel-slide img-src="/images/metaweek.png"> </b-carousel-slide>
-
-        <!-- Slides with image only -->
-        <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
-
-        <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
+        <b-carousel-slide
+          v-for="slide in carousell_slides"
+          :key="slide.id"
+          :img-src="slide.link"
+        >
+        </b-carousel-slide>
       </b-carousel>
       <h2 class="text-center text-white pt-5 pb-3" style="font-weight: 800">
         NEWS
@@ -415,7 +427,7 @@
       class="pt-3"
       style="
         border-radius: 42px;
-        background-image: url('/images/news.png'); /* The image used */
+        background-image: url('/images/main-gradient.png'); /* The image used */
         height: 100%; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
@@ -474,19 +486,19 @@
           style="background-color: transparent"
         >
           <div class="p-4">
-            <h2
+            <h1
               class="text-center text-white"
               style="font-weight: 800; margin: 0px"
             >
               POWERED BY
-            </h2>
+            </h1>
 
-            <h2
+            <h1
               class="text-center text-white"
               style="font-weight: 800; margin: 0px"
             >
               KLAYTN
-            </h2>
+            </h1>
 
             <b-row
               align-v="center"
@@ -502,7 +514,7 @@
                 ></b-img-lazy>
               </b-col>
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-                <p style="font-weight: 700; font-size: 22px">
+                <p style="font-weight: 700; font-size: 18px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -649,6 +661,28 @@ export default {
       form: {
         email: "",
       },
+      carousell_slides: [
+        {
+          id: 1,
+          link: "/images/carousell1.png",
+        },
+        {
+          id: 2,
+          link: "/images/carousell2.png",
+        },
+        {
+          id: 3,
+          link: "/images/carousell3.png",
+        },
+        {
+          id: 4,
+          link: "/images/carousell4.png",
+        },
+        {
+          id: 5,
+          link: "/images/carousell4.png",
+        },
+      ],
       news: [
         {
           id: 1,
