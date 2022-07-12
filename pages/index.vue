@@ -129,6 +129,7 @@
             </b-button>
 
             <b-button
+              :disabled="!emailState"
               class="d-block d-md-none mt-3"
               style="background-color: #00c0f9; border-color: #00c0f9"
               >Enter the MTRX
@@ -414,9 +415,16 @@
 
             <b-button
               :disabled="!emailState"
-              class="ml-3"
+              class="d-none d-md-block ml-3"
               style="background-color: #00c0f9; border-color: #00c0f9"
               >ENTER THE MTRX
+            </b-button>
+
+            <b-button
+              :disabled="!emailState"
+              class="d-block d-md-none mt-3"
+              style="background-color: #00c0f9; border-color: #00c0f9"
+              >Enter the MTRX
             </b-button>
           </b-form>
         </b-col>
