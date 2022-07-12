@@ -98,9 +98,9 @@
           </div>
         </b-col>
         <b-col class="pt-3" cols="12" md="6" sm="12">
-          <h1 class="pb-3" style="font-weight: 800; color: #43ee9c">
+          <h2 class="pb-3" style="font-weight: 800; color: #43ee9c">
             A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
-          </h1>
+          </h2>
           <h2 class="text-white" style="font-weight: 800">
             BE THE FIRST TO KNOW
           </h2>
@@ -144,7 +144,7 @@
         >
           <b-row align-v="center" align-h="center" class="py-4 w-100">
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-              <h1
+              <h2
                 style="
                   font-weight: 800;
                   color: rgba(67, 238, 156, 1);
@@ -152,8 +152,8 @@
                 "
               >
                 IT’S YOUR WORLD
-              </h1>
-              <h1
+              </h2>
+              <h2
                 style="
                   font-weight: 800;
                   color: rgba(67, 238, 156, 1);
@@ -162,7 +162,7 @@
                 class="pb-3"
               >
                 AND ITS YOUR STAGE
-              </h1>
+              </h2>
 
               <p class="pb-2">
                 Welcome to the MTRXVerse, the ultimate talent and performance
@@ -201,9 +201,9 @@
           style="max-width: 250px"
           src="/images/metafest.svg"
         ></b-img-lazy>
-        <h1 class="text-center" style="font-weight: 700; color: #43ee9c">
+        <h2 class="text-center" style="font-weight: 800; color: #43ee9c">
           ROADMAP
-        </h1>
+        </h2>
 
         <b-img-lazy
           class="center-img d-none d-md-block"
@@ -248,6 +248,40 @@
       </div>
     </div>
 
+    <h2 class="text-center text-white py-3" style="font-weight: 800">NEWS</h2>
+    <b-card-group class="p-3" deck>
+      <b-card
+        v-for="item in news"
+        :key="item.id"
+        style="background-color: #07fcfc !important"
+        no-body
+      >
+        <div class="p-1">
+          <b-card-img class="blog-img" :src="item.image" alt="Image">
+          </b-card-img>
+          <a
+            :href="item.link"
+            style="
+              position: absolute;
+              z-index: 10000;
+              right: 2rem;
+              top: 1rem;
+              color: #07fcfc;
+            "
+            ><b-icon scale="2" icon="arrow-right"></b-icon
+          ></a>
+
+          <b-card-title class="pt-2" style="height: 94px">
+            {{ item.title }}
+          </b-card-title>
+          <b-card-text style="height: 96px">
+            {{ item.content }}
+          </b-card-text>
+          <b-button :href="item.link" variant="light">Read more</b-button>
+        </div>
+      </b-card>
+    </b-card-group>
+
     <div
       class="pt-5"
       style="
@@ -259,39 +293,6 @@
         background-size: cover; /* Resize the background image to cover the entire container */
       "
     >
-      <h1 class="text-center text-white py-3" style="font-weight: 700">NEWS</h1>
-      <b-card-group class="p-3" deck>
-        <b-card
-          v-for="item in news"
-          :key="item.id"
-          style="background-color: #07fcfc !important"
-          no-body
-        >
-          <div class="p-1">
-            <b-card-img class="blog-img" :src="item.image" alt="Image">
-            </b-card-img>
-            <a
-              :href="item.link"
-              style="
-                position: absolute;
-                z-index: 10000;
-                right: 2rem;
-                top: 1rem;
-                color: #07fcfc;
-              "
-              ><b-icon scale="2" icon="arrow-right"></b-icon
-            ></a>
-
-            <b-card-title class="pt-2">
-              {{ item.title }}
-            </b-card-title>
-            <b-card-text>
-              {{ item.content }}
-            </b-card-text>
-          </div>
-        </b-card>
-      </b-card-group>
-
       <div class="pb-5 mt-5">
         <b-card
           no-body
@@ -299,19 +300,19 @@
           style="background-color: transparent"
         >
           <div class="p-4">
-            <h1
+            <h2
               class="text-center text-white"
-              style="font-weight: 700; margin: 0px"
+              style="font-weight: 800; margin: 0px"
             >
               POWERED BY
-            </h1>
+            </h2>
 
-            <h1
+            <h2
               class="text-center text-white"
-              style="font-weight: 700; margin: 0px"
+              style="font-weight: 800; margin: 0px"
             >
               KLAYTN
-            </h1>
+            </h2>
 
             <b-row align-v="center" align-h="center" class="py-4 w-100">
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
@@ -474,7 +475,7 @@ export default {
           image: "/images/blog2.png",
           link: "https://bit.ly/PageSixMtrx",
           content:
-            "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill, which brought out the likes of Benny Medina, Kaia Gerber, Zachary Quinto and Cuba Gooding Jr.",
+            "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
         },
         {
           id: 3,
