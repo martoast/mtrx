@@ -90,12 +90,12 @@
       <b-row class="pb-5 p-3" align-v="center">
         <b-col cols="12" md="6" sm="12">
           <div class="p-2">
-            <b-img
+            <b-img-lazy
               style="border-radius: 300px; max-height: 418px; width: 590px"
               src="/images/pool.jpg"
               fluid
               alt="Responsive image"
-            ></b-img>
+            ></b-img-lazy>
           </div>
         </b-col>
         <b-col class="pt-3" cols="12" md="6" sm="12">
@@ -205,23 +205,27 @@
           ROADMAP
         </h1>
 
-        <b-img
+        <b-img-lazy
           class="center-img d-none d-md-block"
           src="/images/timeline.png"
           fluid-grow
           alt="roadmap-image"
           style="padding-right: 3rem"
-        ></b-img>
-        <b-img
+        ></b-img-lazy>
+        <b-img-lazy
           class="center-img d-block d-md-none"
           src="/images/timeline.png"
           fluid-grow
           alt="roadmap-image"
           style="padding-right: 1rem"
-        ></b-img>
+        ></b-img-lazy>
       </div>
       <div class="pb-5">
-        <b-img fluid src="/images/metamansion.png" class="center-img"></b-img>
+        <b-img-lazy
+          fluid
+          src="/images/metamansion.png"
+          class="center-img"
+        ></b-img-lazy>
 
         <b-carousel
           id="carousel-1"
@@ -318,12 +322,12 @@
             </b-col>
 
             <b-col class="ml-auto" cols="12" md="4" sm="12">
-              <b-img
+              <b-img-lazy
                 src="/images/klaytn.png"
                 style="max-width: 300px"
                 fluid
                 alt="Fluid image"
-              ></b-img>
+              ></b-img-lazy>
             </b-col>
           </b-row>
         </div>
@@ -335,7 +339,10 @@
         <b-col col md="5" sm="12">
           <div class="d-flex">
             <div>
-              <b-img class="pb-3" src="/images/footerlogo.svg"></b-img>
+              <b-img-lazy
+                class="pb-3"
+                src="/images/footerlogo.svg"
+              ></b-img-lazy>
               <p
                 class="text-white pb-3"
                 style="font-weight: 700; font-size: 24px"
@@ -409,22 +416,22 @@
 
     <div class="d-none d-md-flex justify-content-center">
       <b-btn variant="link">
-        <b-img src="/images/social/youtube.svg" fluid></b-img>
+        <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
       </b-btn>
       <b-btn variant="link">
-        <b-img src="/images/social/facebook.svg"></b-img>
+        <b-img-lazy src="/images/social/facebook.svg"></b-img-lazy>
       </b-btn>
       <b-btn variant="link">
-        <b-img src="/images/social/twitter.svg"></b-img>
+        <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
       </b-btn>
       <b-btn variant="link">
-        <b-img src="/images/social/twitch.svg"></b-img>
+        <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
       </b-btn>
       <b-btn variant="link">
-        <b-img src="/images/social/instagram.svg"></b-img>
+        <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
       </b-btn>
       <b-btn variant="link">
-        <b-img src="/images/social/discord.svg"></b-img>
+        <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
       </b-btn>
     </div>
   </b-container>
