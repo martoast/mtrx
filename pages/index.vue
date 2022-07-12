@@ -366,11 +366,6 @@
             ENTER THE MTRX
           </h1>
           <netlify-form style="justify-content: center"></netlify-form>
-          <b-modal ref="my-modal" hide-footer title="Using Component Methods">
-            <div class="d-block text-center">
-              <h3>Hello From My Modal!</h3>
-            </div>
-          </b-modal>
         </b-col>
       </b-row>
     </b-container>
