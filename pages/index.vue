@@ -112,7 +112,30 @@
 
           <h4 class="text-white pb-3" id="timer"></h4>
 
-          <netlify-form></netlify-form>
+          <b-form inline @submit="onSubmit" @reset="onReset">
+            <b-form-input
+              style="background-color: transparent; border-color: #6e0095"
+              id="input-1"
+              v-model="form.email"
+              :state="emailState"
+              type="email"
+              placeholder="EMAIL"
+              required
+            ></b-form-input>
+
+            <b-button
+              :disabled="!emailState"
+              class="d-none d-md-block ml-3"
+              style="background-color: #00c0f9; border-color: #00c0f9"
+              >ENTER THE MTRX
+            </b-button>
+
+            <b-button
+              class="d-block d-md-none mt-3"
+              style="background-color: #00c0f9; border-color: #00c0f9"
+              >Enter the MTRX
+            </b-button>
+          </b-form>
         </b-col>
       </b-row>
       <div class="pb-5">
@@ -365,7 +388,29 @@
           >
             ENTER THE MTRX
           </h1>
-          <netlify-form style="justify-content: center"></netlify-form>
+          <b-form
+            style="justify-content: center"
+            inline
+            @submit="onSubmit"
+            @reset="onReset"
+          >
+            <b-form-input
+              style="background-color: transparent; border-color: #6e0095"
+              id="input-1"
+              v-model="form.email"
+              :state="emailState"
+              type="email"
+              placeholder="EMAIL"
+              required
+            ></b-form-input>
+
+            <b-button
+              :disabled="!emailState"
+              class="ml-3"
+              style="background-color: #00c0f9; border-color: #00c0f9"
+              >ENTER THE MTRX
+            </b-button>
+          </b-form>
         </b-col>
       </b-row>
     </b-container>
@@ -394,13 +439,9 @@
 </template>
 
 <script>
-import NetlifyForm from "../components/NetlifyForm.vue";
 export default {
   name: "IndexPage",
   layout: "main",
-  components: {
-    NetlifyForm,
-  },
 
   data() {
     return {

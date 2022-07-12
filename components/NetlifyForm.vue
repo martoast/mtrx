@@ -1,12 +1,5 @@
 <template>
-  <b-form
-    inline
-    name="contactus"
-    @submit="onSubmit"
-    method="post"
-    netlify
-    netlify-honeypot="bot-field"
-  >
+  <b-form inline name="contactus" @submit="onSubmit" method="post" netlify>
     <b-form-input
       style="background-color: transparent; border-color: #6e0095"
       id="input-1"
