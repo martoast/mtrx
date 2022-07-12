@@ -109,32 +109,10 @@
           <h2 class="text-white pb-3" style="font-weight: 800; font-size: 30px">
             SIGN UP NOW
           </h2>
-          <!-- <h4 class="text-white pb-3">134 days, 09 hours 32 minutes</h4> -->
+
           <h4 class="text-white pb-3" id="timer"></h4>
-          <b-form inline @submit="onSubmit" @reset="onReset">
-            <b-form-input
-              style="background-color: transparent; border-color: #6e0095"
-              id="input-1"
-              v-model="form.email"
-              :state="emailState"
-              type="email"
-              placeholder="EMAIL"
-              required
-            ></b-form-input>
 
-            <b-button
-              :disabled="!emailState"
-              class="d-none d-md-block ml-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
-              >ENTER THE MTRX
-            </b-button>
-
-            <b-button
-              class="d-block d-md-none mt-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
-              >Enter the MTRX
-            </b-button>
-          </b-form>
+          <netlify-form></netlify-form>
         </b-col>
       </b-row>
       <div class="pb-5">
@@ -263,13 +241,13 @@
               <b-card-img class="blog-img" :src="item.image" alt="Image">
               </b-card-img>
               <a
-                href="#"
+                :href="item.link"
                 style="
                   position: absolute;
                   z-index: 10000;
                   right: 2rem;
                   top: 1rem;
-                  color: black;
+                  color: #07fcfc;
                 "
                 ><b-icon scale="2" icon="arrow-right"></b-icon
               ></a>
@@ -378,7 +356,7 @@
         </b-col>
         <b-col col md="7" sm="12">
           <h1
-            class="text-white text-center"
+            class="text-white text-center pb-3"
             style="
               font-weight: 700;
               font-size: 43px;
@@ -387,26 +365,12 @@
           >
             ENTER THE MTRX
           </h1>
-          <b-form
-            inline
-            @submit="onSubmit"
-            @reset="onReset"
-            style="justify-content: center"
-          >
-            <!-- Using components -->
-            <b-input-group class="mt-3">
-              <b-form-input
-                placeholder="Your email address"
-                v-model="form.email"
-                :state="emailState"
-                required
-                type="email"
-              ></b-form-input>
-              <b-input-group-append>
-                <b-button variant="dark">Send email</b-button>
-              </b-input-group-append>
-            </b-input-group>
-          </b-form>
+          <netlify-form style="justify-content: center"></netlify-form>
+          <b-modal ref="my-modal" hide-footer title="Using Component Methods">
+            <div class="d-block text-center">
+              <h3>Hello From My Modal!</h3>
+            </div>
+          </b-modal>
         </b-col>
       </b-row>
     </b-container>
@@ -435,9 +399,13 @@
 </template>
 
 <script>
+import NetlifyForm from "../components/NetlifyForm.vue";
 export default {
   name: "IndexPage",
   layout: "main",
+  components: {
+    NetlifyForm,
+  },
 
   data() {
     return {
@@ -449,21 +417,21 @@ export default {
       news: [
         {
           id: 1,
-          title: "title of the blog",
+          title: "AP Photos Diplo Hamptons Party",
           subtitle: "subtitle",
-          image:
-            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
+          image: "/images/blog1.png",
+          link: "https://bit.ly/APNewsMtrx",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "Enjoy all the photos by AP images of our latest metamansion takeover. ",
         },
         {
           id: 2,
-          title: "title of the blog",
+          title: "Parties take over the Hamptons for Fourth of July weekend",
           subtitle: "subtitle",
-          image:
-            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
+          image: "/images/blog2.png",
+          link: "https://bit.ly/PageSixMtrx",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill, which brought out the likes of Benny Medina, Kaia Gerber, Zachary Quinto and Cuba Gooding Jr.",
         },
         {
           id: 3,
@@ -471,6 +439,7 @@ export default {
           subtitle: "subtitle",
           image:
             "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
+          link: "https://bit.ly/PageSixMtrx",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
