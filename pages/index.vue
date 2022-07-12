@@ -78,14 +78,12 @@
 
     <div
       style="
-        background: linear-gradient(
-          180deg,
-          rgba(121, 102, 233, 0.0270833) 0.01%,
-          rgba(94, 162, 239, 0.072) 0.02%,
-          rgba(209, 45, 156, 0.4) 100%
-        );
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 42px;
+        background-image: url('/images/main-gradient.png'); /* The image used */
+        height: 100%; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
       "
     >
       <b-row class="pb-5 p-3" align-v="center">
@@ -248,88 +246,97 @@
           <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
         </b-carousel>
       </div>
-
-      <div>
-        <h1 class="text-center text-white pb-3" style="font-weight: 700">
-          NEWS
-        </h1>
-        <b-card-group class="p-3" deck>
-          <b-card
-            v-for="item in news"
-            :key="item.id"
-            style="background-color: #07fcfc !important"
-            no-body
-          >
-            <div class="p-1">
-              <b-card-img class="blog-img" :src="item.image" alt="Image">
-              </b-card-img>
-              <a
-                :href="item.link"
-                style="
-                  position: absolute;
-                  z-index: 10000;
-                  right: 2rem;
-                  top: 1rem;
-                  color: #07fcfc;
-                "
-                ><b-icon scale="2" icon="arrow-right"></b-icon
-              ></a>
-
-              <b-card-title class="pt-2">
-                {{ item.title }}
-              </b-card-title>
-              <b-card-text>
-                {{ item.content }}
-              </b-card-text>
-            </div>
-          </b-card>
-        </b-card-group>
-      </div>
     </div>
 
-    <div class="pb-5 mt-5">
-      <b-card
-        no-body
-        class="text-white align-items-center"
-        style="border-radius: 25px; background-color: gray"
-      >
-        <div class="p-4">
-          <h1
-            class="text-center text-white"
-            style="font-weight: 700; margin: 0px"
-          >
-            POWERED BY
-          </h1>
+    <div
+      class="pt-5"
+      style="
+        border-radius: 42px;
+        background-image: url('/images/news.png'); /* The image used */
+        height: 100%; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+      "
+    >
+      <h1 class="text-center text-white py-3" style="font-weight: 700">NEWS</h1>
+      <b-card-group class="p-3" deck>
+        <b-card
+          v-for="item in news"
+          :key="item.id"
+          style="background-color: #07fcfc !important"
+          no-body
+        >
+          <div class="p-1">
+            <b-card-img class="blog-img" :src="item.image" alt="Image">
+            </b-card-img>
+            <a
+              :href="item.link"
+              style="
+                position: absolute;
+                z-index: 10000;
+                right: 2rem;
+                top: 1rem;
+                color: #07fcfc;
+              "
+              ><b-icon scale="2" icon="arrow-right"></b-icon
+            ></a>
 
-          <h1
-            class="text-center text-white"
-            style="font-weight: 700; margin: 0px"
-          >
-            KLAYTN
-          </h1>
+            <b-card-title class="pt-2">
+              {{ item.title }}
+            </b-card-title>
+            <b-card-text>
+              {{ item.content }}
+            </b-card-text>
+          </div>
+        </b-card>
+      </b-card-group>
 
-          <b-row align-v="center" align-h="center" class="py-4 w-100">
-            <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-              <p style="font-weight: 700; font-size: 22px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore
-              </p>
-            </b-col>
+      <div class="pb-5 mt-5">
+        <b-card
+          no-body
+          class="text-white align-items-center"
+          style="background-color: transparent"
+        >
+          <div class="p-4">
+            <h1
+              class="text-center text-white"
+              style="font-weight: 700; margin: 0px"
+            >
+              POWERED BY
+            </h1>
 
-            <b-col class="ml-auto" cols="12" md="4" sm="12">
-              <b-img-lazy
-                src="/images/klaytn.png"
-                style="max-width: 300px"
-                fluid
-                alt="Fluid image"
-              ></b-img-lazy>
-            </b-col>
-          </b-row>
-        </div>
-      </b-card>
+            <h1
+              class="text-center text-white"
+              style="font-weight: 700; margin: 0px"
+            >
+              KLAYTN
+            </h1>
+
+            <b-row align-v="center" align-h="center" class="py-4 w-100">
+              <b-col class="ml-md-auto" cols="12" md="6" sm="12">
+                <p style="font-weight: 700; font-size: 22px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore
+                </p>
+              </b-col>
+
+              <b-col class="ml-auto" cols="12" md="4" sm="12">
+                <b-img-lazy
+                  src="/images/klaytn.png"
+                  style="max-width: 300px"
+                  fluid
+                  alt="Fluid image"
+                ></b-img-lazy>
+              </b-col>
+            </b-row>
+          </div>
+        </b-card>
+      </div>
     </div>
 
     <b-container class="py-5">
