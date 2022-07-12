@@ -348,72 +348,71 @@
           style="padding-right: 1rem"
         ></b-img-lazy>
       </div>
-      <div>
-        <b-img-lazy
-          fluid
-          src="/images/metamansion.png"
-          class="center-img"
-        ></b-img-lazy>
-
-        <b-carousel
-          id="carousel-1"
-          v-model="slide"
-          :interval="4000"
-          controls
-          indicators
-          background="#ababab"
-          style="text-shadow: 1px 1px 2px #333"
-          @sliding-start="onSlideStart"
-          @sliding-end="onSlideEnd"
-        >
-          <b-carousel-slide img-src="/images/metaweek.png"> </b-carousel-slide>
-
-          <!-- Slides with image only -->
-          <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
-
-          <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
-        </b-carousel>
-      </div>
     </div>
 
-    <h2 class="text-center text-white pt-5 pb-3" style="font-weight: 800">
-      NEWS
-    </h2>
-    <b-card-group class="p-3" deck>
-      <b-card
-        v-for="item in news"
-        :key="item.id"
-        style="background-color: #07fcfc !important"
-        no-body
-      >
-        <div class="p-2">
-          <b-card-img class="blog-img" :src="item.image" alt="Image">
-          </b-card-img>
-          <a
-            :href="item.link"
-            style="
-              position: absolute;
-              z-index: 10000;
-              right: 2rem;
-              top: 1rem;
-              color: #07fcfc;
-            "
-            ><b-icon scale="2" icon="arrow-right"></b-icon
-          ></a>
+    <div class="pt-3">
+      <b-img-lazy
+        fluid
+        src="/images/metamansion.png"
+        class="center-img"
+      ></b-img-lazy>
 
-          <b-card-title class="pt-2" style="height: 94px">
-            {{ item.title }}
-          </b-card-title>
-          <b-card-text style="height: 96px">
-            {{ item.content }}
-          </b-card-text>
-          <b-button :href="item.link" variant="light">Read more</b-button>
-        </div>
-      </b-card>
-    </b-card-group>
+      <b-carousel
+        id="carousel-1"
+        class="m-0 p-0"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <b-carousel-slide img-src="/images/metaweek.png"> </b-carousel-slide>
+
+        <!-- Slides with image only -->
+        <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
+
+        <b-carousel-slide img-src="/images/metaweek.png"></b-carousel-slide>
+      </b-carousel>
+      <h2 class="text-center text-white pt-5 pb-3" style="font-weight: 800">
+        NEWS
+      </h2>
+      <b-card-group class="p-3" deck>
+        <b-card
+          v-for="item in news"
+          :key="item.id"
+          style="background-color: #07fcfc !important"
+          no-body
+        >
+          <div class="p-2">
+            <b-card-img class="blog-img" :src="item.image" alt="Image">
+            </b-card-img>
+            <a
+              :href="item.link"
+              style="
+                position: absolute;
+                z-index: 10000;
+                right: 2rem;
+                top: 1rem;
+                color: #07fcfc;
+              "
+              ><b-icon scale="2" icon="arrow-right"></b-icon
+            ></a>
+
+            <b-card-title class="pt-2" style="height: 94px">
+              {{ item.title }}
+            </b-card-title>
+            <b-card-text style="height: 96px">
+              {{ item.content }}
+            </b-card-text>
+            <b-button :href="item.link" variant="light">Read more</b-button>
+          </div>
+        </b-card>
+      </b-card-group>
+    </div>
 
     <div
-      class="pt-5"
+      class="pt-3"
       style="
         border-radius: 42px;
         background-image: url('/images/news.png'); /* The image used */
@@ -468,7 +467,7 @@
           </div>
         </b-card>
       </div>
-      <div class="d-block d-md-none pb-5 mt-5">
+      <div class="d-block d-md-none py-3">
         <b-card
           no-body
           class="text-white align-items-center"
