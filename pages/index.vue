@@ -27,6 +27,31 @@
             News
           </b-nav-item>
         </b-navbar-nav>
+        <b-navbar-nav class="d-none d-md-flex ml-auto">
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
+          </a>
+
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/facebook.svg"></b-img-lazy>
+          </a>
+
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
+          </a>
+
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
+          </a>
+
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
+          </a>
+
+          <a href="//google.com" target="_blank">
+            <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
+          </a>
+        </b-navbar-nav>
       </b-collapse>
     </b-navbar>
 
@@ -99,15 +124,40 @@
             </div>
           </b-col>
           <b-col class="pt-3" cols="12" md="6" sm="12">
-            <h2 class="pb-3" style="font-weight: 800; color: #43ee9c">
+            <h2
+              class="pb-3"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 30px;
+                line-height: 30px;
+                color: #43ee9c;
+              "
+            >
               A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
             </h2>
-            <h2 class="text-white" style="font-weight: 800">
+            <h2
+              class="text-white"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 30px;
+                line-height: 30px;
+              "
+            >
               BE THE FIRST TO KNOW
             </h2>
             <h2
               class="text-white pb-3"
-              style="font-weight: 800; font-size: 30px"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 30px;
+                line-height: 30px;
+              "
             >
               SIGN UP NOW
             </h2>
@@ -116,7 +166,13 @@
 
             <b-form inline @submit="onSubmit" @reset="onReset">
               <b-form-input
-                style="background-color: transparent; border-color: #6e0095"
+                style="
+                  background-color: transparent;
+                  border-color: #6e0095;
+                  line-height: 33px;
+                  font-size: 22px;
+                "
+                :class="emailState ? 'text-white' : 'text-gray'"
                 id="input-1"
                 v-model="form.email"
                 :state="emailState"
@@ -127,16 +183,17 @@
 
               <b-button
                 :disabled="!emailState"
-                class="d-none d-md-block ml-3"
-                style="background-color: #00c0f9; border-color: #00c0f9"
+                class="ml-3"
+                style="
+                  background-color: #00c0f9;
+                  border-color: #00c0f9;
+                  font-family: 'Open Sans';
+                  font-style: italic;
+                  font-weight: 300;
+                  font-size: 22px;
+                  line-height: 33px;
+                "
                 >ENTER THE MTRX
-              </b-button>
-
-              <b-button
-                :disabled="!emailState"
-                class="d-block d-md-none mt-3"
-                style="background-color: #00c0f9; border-color: #00c0f9"
-                >Enter the MTRX
               </b-button>
             </b-form>
           </b-col>
@@ -144,20 +201,45 @@
       </div>
 
       <b-row
-        class="d-block d-md-none pb-5 p-0 m-0 text-center"
+        class="d-block d-md-none pb-3 p-0 m-0 text-center"
         align-v="center"
       >
         <b-col class="pt-3" cols="12" md="6" sm="12">
           <h2
             class="py-3"
-            style="font-weight: 800; font-size: 20px; color: #43ee9c"
+            style="
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 800;
+              font-size: 20px;
+              line-height: 30px;
+              color: #43ee9c;
+            "
           >
             A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
           </h2>
-          <h2 class="text-white" style="font-weight: 700; font-size: 20px">
+          <h2
+            class="text-white"
+            style="
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 800;
+              font-size: 20px;
+              line-height: 30px;
+            "
+          >
             BE THE FIRST TO KNOW
           </h2>
-          <h2 class="text-white pb-2" style="font-weight: 700; font-size: 20px">
+          <h2
+            class="text-white pb-2"
+            style="
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 800;
+              font-size: 20px;
+              line-height: 30px;
+            "
+          >
             SIGN UP NOW
           </h2>
 
@@ -171,7 +253,16 @@
             @reset="onReset"
           >
             <b-form-input
-              style="background-color: transparent; border-color: #6e0095"
+              style="
+                background-color: transparent;
+                border-color: #6e0095;
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 33px;
+              "
+              :class="emailState ? 'text-white' : 'text-gray'"
               id="input-1"
               v-model="form.email"
               :state="emailState"
@@ -182,17 +273,18 @@
 
             <b-button
               :disabled="!emailState"
-              class="d-none d-md-block ml-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
-              >ENTER THE MTRX
-            </b-button>
-
-            <b-button
-              :disabled="!emailState"
               block
               class="d-block d-md-none mt-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
-              >Enter the MTRX
+              style="
+                background-color: #00c0f9;
+                border-color: #00c0f9;
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 33px;
+              "
+              >ENTER THE MTRX
             </b-button>
           </b-form>
         </b-col>
@@ -218,7 +310,10 @@
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
               <h2
                 style="
+                  font-family: 'Open Sans';
+                  font-style: normal;
                   font-weight: 800;
+                  font-size: 40px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
                 "
@@ -227,7 +322,10 @@
               </h2>
               <h2
                 style="
+                  font-family: 'Open Sans';
+                  font-style: normal;
                   font-weight: 800;
+                  font-size: 40px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
                 "
@@ -236,7 +334,16 @@
                 AND ITS YOUR STAGE
               </h2>
 
-              <p class="pb-2">
+              <p
+                style="
+                  font-family: 'Montserrat';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 18px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
                 Welcome to the MTRXVerse, the ultimate talent and performance
                 Metaverse built by actual music industry artists to help
                 creators share their world with the world; no matter the
@@ -251,6 +358,10 @@
                 pill
                 class="border-0"
                 style="
+                  font-family: 'Open Sans';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 13px;
                   background: linear-gradient(
                     180deg,
                     rgba(94, 162, 239, 0.8) 0%,
@@ -283,7 +394,9 @@
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
               <h2
                 style="
-                  font-weight: 700;
+                  font-family: 'Open Sans';
+                  font-style: normal;
+                  font-weight: 800;
                   font-size: 20px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
@@ -293,8 +406,11 @@
               </h2>
               <h2
                 style="
-                  font-weight: 700;
+                  font-family: 'Open Sans';
+                  font-style: normal;
+                  font-weight: 800;
                   font-size: 20px;
+
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
                 "
@@ -303,27 +419,22 @@
                 AND ITS YOUR STAGE
               </h2>
 
-              <p class="pb-2">
+              <p
+                style="
+                  font-family: 'Open Sans';
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 20px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
                 Welcome to the MTRXVerse, the ultimate talent and performance
                 Metaverse built by actual music industry artists to help
                 creators share their world with the world; no matter the
-                location. From fully customizable performance stages, to fashion
-                airdrops, to brand sponsored immersive activations, to full on
-                music festivals with custom effects the MTRXVERSE is the
-                ultimate home for the next generation of artists to directly
-                connect with their fans around the globe in a whole new way. You
-                no longer have to BE THERE to BE THERE. Enter the MTRXVerse
+                location.
               </p>
-              <b-button
-                pill
-                class="border-0"
-                style="
-                  background: linear-gradient(
-                    180deg,
-                    rgba(94, 162, 239, 0.8) 0%,
-                    rgba(209, 45, 156, 0.064) 100%
-                  );
-                "
+              <b-button pill class="border-0 d-none d-md-block"
                 >LEARN MORE</b-button
               >
             </b-col>
@@ -366,7 +477,13 @@
       <b-img-lazy
         fluid
         src="/images/metamansion.png"
-        class="center-img"
+        class="d-none d-md-block center-img"
+      ></b-img-lazy>
+
+      <b-img-lazy
+        fluid
+        src="/images/metamansion.png"
+        class="d-block d-md-none center-img w-100"
       ></b-img-lazy>
 
       <b-carousel
@@ -386,7 +503,16 @@
         >
         </b-carousel-slide>
       </b-carousel>
-      <h2 class="text-center text-white pt-5 pb-3" style="font-weight: 800">
+      <h2
+        class="text-center text-white pt-5 pb-3"
+        style="
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 72px;
+        "
+      >
         NEWS
       </h2>
       <b-card-group class="p-3" deck>
@@ -443,21 +569,46 @@
           <div class="p-4">
             <h2
               class="text-center text-white"
-              style="font-weight: 800; margin: 0px"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0px;
+              "
             >
               POWERED BY
             </h2>
 
             <h2
               class="text-center text-white"
-              style="font-weight: 800; margin: 0px"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0px;
+              "
             >
               KLAYTN
             </h2>
 
             <b-row align-v="center" align-h="center" class="py-4 w-100">
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-                <p style="font-weight: 700; font-size: 22px">
+                <p
+                  style="
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    letter-spacing: -0.015em;
+                    font-size: 22px;
+                  "
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -488,14 +639,28 @@
           <div class="p-4">
             <h1
               class="text-center text-white"
-              style="font-weight: 800; margin: 0px"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0px;
+              "
             >
               POWERED BY
             </h1>
 
             <h1
               class="text-center text-white"
-              style="font-weight: 800; margin: 0px"
+              style="
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0px;
+              "
             >
               KLAYTN
             </h1>
@@ -514,7 +679,16 @@
                 ></b-img-lazy>
               </b-col>
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
-                <p style="font-weight: 700; font-size: 18px">
+                <p
+                  style="
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 30px;
+                    text-align: justify;
+                  "
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -540,7 +714,7 @@
               ></b-img-lazy>
               <p
                 class="text-white pb-3"
-                style="font-weight: 700; font-size: 24px"
+                style="font-weight: 700; font-size: 22px"
               >
                 The Bridge Between Metaverse and IRL Events.
               </p>
@@ -627,24 +801,34 @@
     </b-container>
 
     <div class="d-none d-md-flex justify-content-center">
-      <b-btn variant="link">
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
-      </b-btn>
-      <b-btn variant="link">
+      </a>
+
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/facebook.svg"></b-img-lazy>
-      </b-btn>
-      <b-btn variant="link">
+      </a>
+
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
-      </b-btn>
-      <b-btn variant="link">
+      </a>
+
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
-      </b-btn>
-      <b-btn variant="link">
+      </a>
+
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
-      </b-btn>
-      <b-btn variant="link">
+      </a>
+
+      <a href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
-      </b-btn>
+      </a>
+    </div>
+    <div class="d-block d-md-none">
+      <p class="m-0 p-0 text-center text-white">
+        2022 MTRX Inc. Allright reserved
+      </p>
     </div>
   </b-container>
 </template>
@@ -790,6 +974,22 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~assets/fonts/Montserrat.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~assets/fonts/OpenSans.ttf") format("truetype");
+}
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
 }
