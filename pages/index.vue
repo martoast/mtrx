@@ -86,31 +86,90 @@
         background-size: cover; /* Resize the background image to cover the entire container */
       "
     >
-      <b-row class="pb-5 p-3" align-v="center">
-        <b-col cols="12" md="6" sm="12">
-          <div class="p-2">
-            <b-img-lazy
-              style="border-radius: 300px; max-height: 418px; width: 590px"
-              src="/images/pool.jpg"
-              fluid
-              alt="Responsive image"
-            ></b-img-lazy>
-          </div>
-        </b-col>
+      <div class="d-none d-md-block">
+        <b-row class="pb-5 p-3" align-v="center">
+          <b-col cols="12" md="6" sm="12">
+            <div class="p-2">
+              <b-img-lazy
+                style="border-radius: 300px; max-height: 418px; width: 590px"
+                src="/images/pool.jpg"
+                fluid
+                alt="Responsive image"
+              ></b-img-lazy>
+            </div>
+          </b-col>
+          <b-col class="pt-3" cols="12" md="6" sm="12">
+            <h2 class="pb-3" style="font-weight: 800; color: #43ee9c">
+              A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
+            </h2>
+            <h2 class="text-white" style="font-weight: 800">
+              BE THE FIRST TO KNOW
+            </h2>
+            <h2
+              class="text-white pb-3"
+              style="font-weight: 800; font-size: 30px"
+            >
+              SIGN UP NOW
+            </h2>
+
+            <h4 class="text-white pb-3" id="timer"></h4>
+
+            <b-form inline @submit="onSubmit" @reset="onReset">
+              <b-form-input
+                style="background-color: transparent; border-color: #6e0095"
+                id="input-1"
+                v-model="form.email"
+                :state="emailState"
+                type="email"
+                placeholder="EMAIL"
+                required
+              ></b-form-input>
+
+              <b-button
+                :disabled="!emailState"
+                class="d-none d-md-block ml-3"
+                style="background-color: #00c0f9; border-color: #00c0f9"
+                >ENTER THE MTRX
+              </b-button>
+
+              <b-button
+                :disabled="!emailState"
+                class="d-block d-md-none mt-3"
+                style="background-color: #00c0f9; border-color: #00c0f9"
+                >Enter the MTRX
+              </b-button>
+            </b-form>
+          </b-col>
+        </b-row>
+      </div>
+
+      <b-row
+        class="d-block d-md-none pb-5 p-0 m-0 text-center"
+        align-v="center"
+      >
         <b-col class="pt-3" cols="12" md="6" sm="12">
-          <h2 class="pb-3" style="font-weight: 800; color: #43ee9c">
+          <h2
+            class="py-3"
+            style="font-weight: 800; font-size: 20px; color: #43ee9c"
+          >
             A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
           </h2>
-          <h2 class="text-white" style="font-weight: 800">
+          <h2 class="text-white" style="font-weight: 700; font-size: 20px">
             BE THE FIRST TO KNOW
           </h2>
-          <h2 class="text-white pb-3" style="font-weight: 800; font-size: 30px">
+          <h2 class="text-white pb-2" style="font-weight: 700; font-size: 20px">
             SIGN UP NOW
           </h2>
 
-          <h4 class="text-white pb-3" id="timer"></h4>
+          <h4 class="text-white pb-3" id="timer2"></h4>
 
-          <b-form inline @submit="onSubmit" @reset="onReset">
+          <b-form
+            style="justify-content: center"
+            class="pb-4"
+            inline
+            @submit="onSubmit"
+            @reset="onReset"
+          >
             <b-form-input
               style="background-color: transparent; border-color: #6e0095"
               id="input-1"
@@ -136,11 +195,22 @@
             </b-button>
           </b-form>
         </b-col>
+        <b-col cols="12" md="6" sm="12">
+          <div class="p-2">
+            <b-img-lazy
+              style="border-radius: 300px; max-height: 418px; width: 590px"
+              src="/images/pool.jpg"
+              fluid
+              alt="Responsive image"
+            ></b-img-lazy>
+          </div>
+        </b-col>
       </b-row>
+
       <div class="pb-5">
         <b-card
           no-body
-          class="text-white align-items-center p-3"
+          class="d-none d-md-block text-white align-items-center p-3"
           style="border-radius: 100px; background: rgba(94, 94, 94, 0.5)"
         >
           <b-row align-v="center" align-h="center" class="py-4 w-100">
@@ -193,6 +263,59 @@
             </b-col>
           </b-row>
         </b-card>
+        <b-card
+          no-body
+          class="d-block d-md-none text-white align-items-center"
+          style="border-radius: 100px; background: transparent"
+        >
+          <b-row
+            align-v="center"
+            align-h="center"
+            class="w-100 text-center p-0 m-0"
+          >
+            <b-col class="ml-md-auto" cols="12" md="6" sm="12">
+              <h2
+                style="
+                  font-weight: 700;
+                  font-size: 20px;
+                  color: rgba(67, 238, 156, 1);
+                  margin: 0px;
+                "
+              >
+                IT’S YOUR WORLD
+              </h2>
+              <h2
+                style="
+                  font-weight: 700;
+                  font-size: 20px;
+                  color: rgba(67, 238, 156, 1);
+                  margin: 0px;
+                "
+                class="pb-3"
+              >
+                AND ITS YOUR STAGE
+              </h2>
+
+              <p class="pb-2">
+                Welcome to the MTRXVerse, the ultimate talent and performance
+                Metaverse built by actual music industry artists to help
+                creators share their world with the world; no matter the
+                location. From fully customizable performance stages, to fashion
+                airdrops, to brand sponsored immersive activations, to full on
+                music festivals with custom effects the MTRXVERSE is the
+                ultimate home for the next generation of artists to directly
+                connect with their fans around the globe in a whole new way. You
+                no longer have to BE THERE to BE THERE. Enter the MTRXVerse
+              </p>
+              <b-button
+                pill
+                class="border-0"
+                style="background-color: #00c0f9; border-color: #00c0f9"
+                >LEARN MORE</b-button
+              >
+            </b-col>
+          </b-row>
+        </b-card>
       </div>
 
       <div class="pb-5 text-white">
@@ -202,7 +325,10 @@
           style="max-width: 250px"
           src="/images/metafest.svg"
         ></b-img-lazy>
-        <h2 class="text-center" style="font-weight: 800; color: #43ee9c">
+        <h2
+          class="text-center"
+          style="font-weight: 700; color: #43ee9c; letter-spacing: 0.25em"
+        >
           ROADMAP
         </h2>
 
@@ -257,7 +383,7 @@
         style="background-color: #07fcfc !important"
         no-body
       >
-        <div class="p-1">
+        <div class="p-2">
           <b-card-img class="blog-img" :src="item.image" alt="Image">
           </b-card-img>
           <a
@@ -294,7 +420,7 @@
         background-size: cover; /* Resize the background image to cover the entire container */
       "
     >
-      <div class="pb-5 mt-5">
+      <div class="d-none d-md-block pb-5 mt-5">
         <b-card
           no-body
           class="text-white align-items-center"
@@ -334,6 +460,54 @@
                   fluid
                   alt="Fluid image"
                 ></b-img-lazy>
+              </b-col>
+            </b-row>
+          </div>
+        </b-card>
+      </div>
+      <div class="d-block d-md-none pb-5 mt-5">
+        <b-card
+          no-body
+          class="text-white align-items-center"
+          style="background-color: transparent"
+        >
+          <div class="p-4">
+            <h2
+              class="text-center text-white"
+              style="font-weight: 800; margin: 0px"
+            >
+              POWERED BY
+            </h2>
+
+            <h2
+              class="text-center text-white"
+              style="font-weight: 800; margin: 0px"
+            >
+              KLAYTN
+            </h2>
+
+            <b-row
+              align-v="center"
+              align-h="center"
+              class="text-center py-4 w-100 p-0 m-0"
+            >
+              <b-col class="ml-auto pb-3" cols="12" md="4" sm="12">
+                <b-img-lazy
+                  src="/images/klaytn.png"
+                  style="max-width: 300px"
+                  fluid
+                  alt="Fluid image"
+                ></b-img-lazy>
+              </b-col>
+              <b-col class="ml-md-auto" cols="12" md="6" sm="12">
+                <p style="font-weight: 700; font-size: 22px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore
+                </p>
               </b-col>
             </b-row>
           </div>
@@ -387,16 +561,12 @@
           </div>
         </b-col>
         <b-col col md="7" sm="12">
-          <h1
+          <h2
             class="text-white text-center pb-3"
-            style="
-              font-weight: 700;
-              font-size: 43px;
-              text-decoration: underline;
-            "
+            style="font-weight: 800; text-decoration: underline"
           >
-            ENTER THE MTRX
-          </h1>
+            JOIN THE WAITLIST
+          </h2>
           <b-form
             style="justify-content: center"
             inline
@@ -524,10 +694,15 @@ export default {
       document.getElementById("timer").innerHTML =
         days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
+      // Display the result in the element with id="demo"
+      document.getElementById("timer2").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
       // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("timer2").innerHTML = "EXPIRED";
       }
     }, 1000);
   },
