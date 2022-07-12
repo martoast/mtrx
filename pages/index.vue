@@ -99,13 +99,10 @@
           </div>
         </b-col>
         <b-col class="pt-3" cols="12" md="6" sm="12">
-          <h1
-            class="pb-3"
-            style="font-weight: 800; font-size: 30px; color: #43ee9c"
-          >
+          <h1 class="pb-3" style="font-weight: 800; color: #43ee9c">
             A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
           </h1>
-          <h2 class="text-white" style="font-weight: 800; font-size: 30px">
+          <h2 class="text-white" style="font-weight: 800">
             BE THE FIRST TO KNOW
           </h2>
           <h2 class="text-white pb-3" style="font-weight: 800; font-size: 30px">
@@ -162,11 +159,12 @@
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
                 "
+                class="pb-3"
               >
                 AND ITS YOUR STAGE
               </h1>
 
-              <p>
+              <p class="pb-2">
                 Welcome to the MTRXVerse, the ultimate talent and performance
                 Metaverse built by actual music industry artists to help
                 creators share their world with the world; no matter the
@@ -337,8 +335,11 @@
         <b-col col md="5" sm="12">
           <div class="d-flex">
             <div>
-              <b-img src="/images/footerlogo.svg"></b-img>
-              <p class="text-white" style="font-weight: 700; font-size: 24px">
+              <b-img class="pb-3" src="/images/footerlogo.svg"></b-img>
+              <p
+                class="text-white pb-3"
+                style="font-weight: 700; font-size: 24px"
+              >
                 The Bridge Between Metaverse and IRL Events.
               </p>
             </div>
@@ -374,7 +375,11 @@
         <b-col col md="7" sm="12">
           <h1
             class="text-white text-center"
-            style="font-weight: 700; font-size: 43px"
+            style="
+              font-weight: 700;
+              font-size: 43px;
+              text-decoration: underline;
+            "
           >
             ENTER THE MTRX
           </h1>
