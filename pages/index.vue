@@ -28,27 +28,31 @@
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="d-none d-md-flex ml-auto">
-          <a href="//google.com" target="_blank">
+          <a class="px-2" href="//google.com" target="_blank">
             <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
           </a>
 
-          <a href="//google.com" target="_blank">
+          <a
+            class="px-2"
+            href="//facebook.com/Mtrxverse-100990529327655/"
+            target="_blank"
+          >
             <b-img-lazy src="/images/social/facebook.svg"></b-img-lazy>
           </a>
 
-          <a href="//google.com" target="_blank">
+          <a class="px-2" href="//twitter.com/mtrxverse" target="_blank">
             <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
           </a>
 
-          <a href="//google.com" target="_blank">
+          <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
             <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
           </a>
 
-          <a href="//google.com" target="_blank">
+          <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
             <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
           </a>
 
-          <a href="//google.com" target="_blank">
+          <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
             <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
           </a>
         </b-navbar-nav>
@@ -127,7 +131,7 @@
             <h2
               class="pb-3"
               style="
-                font-family: 'Open Sans';
+                font-family: 'Lcd';
                 font-style: normal;
                 font-weight: 800;
                 font-size: 30px;
@@ -140,7 +144,6 @@
             <h2
               class="text-white"
               style="
-                font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: 800;
                 font-size: 30px;
@@ -152,7 +155,6 @@
             <h2
               class="text-white pb-3"
               style="
-                font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: 800;
                 font-size: 30px;
@@ -169,6 +171,7 @@
                 style="
                   background-color: transparent;
                   border-color: #6e0095;
+                  font-family: 'Lcd';
                   line-height: 33px;
                   font-size: 22px;
                 "
@@ -208,7 +211,7 @@
           <h2
             class="py-3"
             style="
-              font-family: 'Open Sans';
+              font-family: 'Lcd';
               font-style: normal;
               font-weight: 800;
               font-size: 20px;
@@ -221,7 +224,6 @@
           <h2
             class="text-white"
             style="
-              font-family: 'Open Sans';
               font-style: normal;
               font-weight: 800;
               font-size: 20px;
@@ -233,7 +235,6 @@
           <h2
             class="text-white pb-2"
             style="
-              font-family: 'Open Sans';
               font-style: normal;
               font-weight: 800;
               font-size: 20px;
@@ -256,7 +257,7 @@
               style="
                 background-color: transparent;
                 border-color: #6e0095;
-                font-family: 'Open Sans';
+                font-family: 'Lcd';
                 font-style: italic;
                 font-weight: 300;
                 font-size: 24px;
@@ -278,7 +279,7 @@
               style="
                 background-color: #00c0f9;
                 border-color: #00c0f9;
-                font-family: 'Open Sans';
+                font-family: 'Inter';
                 font-style: italic;
                 font-weight: 300;
                 font-size: 20px;
@@ -310,7 +311,7 @@
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
               <h2
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Lcd';
                   font-style: normal;
                   font-weight: 800;
                   font-size: 40px;
@@ -322,7 +323,7 @@
               </h2>
               <h2
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Lcd';
                   font-style: normal;
                   font-weight: 800;
                   font-size: 40px;
@@ -336,7 +337,7 @@
 
               <p
                 style="
-                  font-family: 'Montserrat';
+                  font-family: 'inter';
                   font-style: normal;
                   font-weight: 700;
                   font-size: 18px;
@@ -358,7 +359,7 @@
                 pill
                 class="border-0"
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Inter';
                   font-style: normal;
                   font-weight: 700;
                   font-size: 13px;
@@ -394,7 +395,7 @@
             <b-col class="ml-md-auto" cols="12" md="6" sm="12">
               <h2
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Lcd';
                   font-style: normal;
                   font-weight: 800;
                   font-size: 20px;
@@ -406,7 +407,7 @@
               </h2>
               <h2
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Lcd';
                   font-style: normal;
                   font-weight: 800;
                   font-size: 20px;
@@ -421,7 +422,7 @@
 
               <p
                 style="
-                  font-family: 'Open Sans';
+                  font-family: 'Inter';
                   font-style: normal;
                   font-weight: 800;
                   font-size: 20px;
@@ -434,9 +435,6 @@
                 creators share their world with the world; no matter the
                 location.
               </p>
-              <b-button pill class="border-0 d-none d-md-block"
-                >LEARN MORE</b-button
-              >
             </b-col>
           </b-row>
         </b-card>
@@ -445,16 +443,38 @@
       <div class="pb-5 text-white">
         <b-img-lazy
           fluid
-          class="pb-1 center-img"
+          class="pb-2 center-img"
           style="max-width: 250px"
           src="/images/metafest.svg"
         ></b-img-lazy>
-        <h2
-          class="text-center"
-          style="font-weight: 700; color: #43ee9c; letter-spacing: 0.25em"
+
+        <h1
+          class="d-none d-md-block text-center"
+          style="
+            font-family: 'Lcd';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            color: #43ee9c;
+            letter-spacing: 0.25em;
+          "
         >
           ROADMAP
-        </h2>
+        </h1>
+
+        <h1
+          class="d-block d-md-none text-center"
+          style="
+            font-family: 'Lcd';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            color: #43ee9c;
+            letter-spacing: 0.25em;
+          "
+        >
+          ROADMAP
+        </h1>
 
         <b-img-lazy
           class="center-img d-none d-md-block"
@@ -488,7 +508,7 @@
 
       <b-carousel
         id="carousel-1"
-        class="m-0 p-0"
+        class="m-0 p-0 py-3"
         v-model="slide"
         :interval="4000"
         controls
@@ -503,8 +523,9 @@
         >
         </b-carousel-slide>
       </b-carousel>
+
       <h2
-        class="text-center text-white pt-5 pb-3"
+        class="text-center text-white py-4"
         style="
           font-family: 'Montserrat';
           font-style: normal;
@@ -537,23 +558,54 @@
               ><b-icon scale="2" icon="arrow-right"></b-icon
             ></a>
 
-            <b-card-title class="pt-2" style="height: 94px">
+            <b-card-title
+              class="pt-2"
+              style="
+                font-family: 'Lcd';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 26px;
+                height: 96px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+              "
+            >
               {{ item.title }}
             </b-card-title>
-            <b-card-text style="height: 96px">
+            <b-card-text
+              style="
+                height: 96px;
+                font-family: 'Inter';
+                font-style: normal;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+              "
+            >
               {{ item.content }}
             </b-card-text>
-            <b-button :href="item.link" variant="light">Read more</b-button>
+            <b-button
+              :href="item.link"
+              variant="light"
+              style="font-family: 'Lcd'; font-style: normal; font-weight: 400"
+              >Read more</b-button
+            >
           </div>
         </b-card>
       </b-card-group>
     </div>
 
     <div
-      class="pt-3"
+      class="py-3"
       style="
         border-radius: 42px;
-        background-image: url('/images/main-gradient.png'); /* The image used */
+        background-image: url('/images/news.png'); /* The image used */
         height: 100%; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
@@ -570,11 +622,10 @@
             <h2
               class="text-center text-white"
               style="
-                font-family: 'Open Sans';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 36px;
-                font-weight: 700;
+                font-size: 54px;
                 margin: 0px;
               "
             >
@@ -584,11 +635,10 @@
             <h2
               class="text-center text-white"
               style="
-                font-family: 'Open Sans';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 36px;
-                font-weight: 700;
+                font-size: 54px;
                 margin: 0px;
               "
             >
@@ -599,7 +649,7 @@
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
                 <p
                   style="
-                    font-family: 'Montserrat';
+                    font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 32px;
@@ -640,7 +690,7 @@
             <h1
               class="text-center text-white"
               style="
-                font-family: 'Open Sans';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 36px;
@@ -654,7 +704,7 @@
             <h1
               class="text-center text-white"
               style="
-                font-family: 'Open Sans';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 36px;
@@ -681,7 +731,7 @@
               <b-col class="ml-md-auto" cols="12" md="6" sm="12">
                 <p
                   style="
-                    font-family: 'Montserrat';
+                    font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15px;
@@ -714,7 +764,12 @@
               ></b-img-lazy>
               <p
                 class="text-white pb-3"
-                style="font-weight: 700; font-size: 22px"
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 22px;
+                "
               >
                 The Bridge Between Metaverse and IRL Events.
               </p>
@@ -772,7 +827,15 @@
             @reset="onReset"
           >
             <b-form-input
-              style="background-color: transparent; border-color: #6e0095"
+              style="
+                background-color: transparent;
+                border-color: #6e0095;
+                font-family: 'Lcd';
+                font-style: italic;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 33px;
+              "
               id="input-1"
               v-model="form.email"
               :state="emailState"
@@ -784,7 +847,15 @@
             <b-button
               :disabled="!emailState"
               class="d-none d-md-block ml-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
+              style="
+                background-color: #00c0f9;
+                border-color: #00c0f9;
+                font-family: 'Inter';
+                font-style: italic;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 33px;
+              "
               >ENTER THE MTRX
             </b-button>
 
@@ -792,7 +863,12 @@
               :disabled="!emailState"
               block
               class="d-block d-md-none mt-3"
-              style="background-color: #00c0f9; border-color: #00c0f9"
+              style="
+                background-color: #00c0f9;
+                border-color: #00c0f9;
+                font-family: 'Inter';
+                font-style: italic;
+              "
               >Enter the MTRX
             </b-button>
           </b-form>
@@ -800,33 +876,46 @@
       </b-row>
     </b-container>
 
-    <div class="d-none d-md-flex justify-content-center">
-      <a href="//google.com" target="_blank">
+    <div class="d-flex justify-content-center pb-4">
+      <a class="px-2" href="//google.com" target="_blank">
         <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
       </a>
 
-      <a href="//google.com" target="_blank">
+      <a
+        class="px-2"
+        href="//facebook.com/Mtrxverse-100990529327655/"
+        target="_blank"
+      >
         <b-img-lazy src="/images/social/facebook.svg"></b-img-lazy>
       </a>
 
-      <a href="//google.com" target="_blank">
+      <a class="px-2" href="//twitter.com/mtrxverse" target="_blank">
         <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
       </a>
 
-      <a href="//google.com" target="_blank">
+      <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
         <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
       </a>
 
-      <a href="//google.com" target="_blank">
+      <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
         <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
       </a>
 
-      <a href="//google.com" target="_blank">
+      <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
         <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
       </a>
     </div>
-    <div class="d-block d-md-none">
-      <p class="m-0 p-0 text-center text-white">
+    <div class="pb-3">
+      <p
+        class="m-0 p-0 text-center"
+        style="
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          color: #e0e0e0;
+        "
+      >
         2022 MTRX Inc. Allright reserved
       </p>
     </div>
@@ -988,6 +1077,22 @@ export default {
   font-weight: 700;
   font-display: swap;
   src: url("~assets/fonts/OpenSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lcd";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~assets/fonts/Lcd.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~assets/fonts/Inter.ttf") format("truetype");
 }
 
 .navbar-toggler-icon {
