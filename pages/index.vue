@@ -28,7 +28,11 @@
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="d-none d-md-flex ml-auto">
-          <a class="px-2" href="//google.com" target="_blank">
+          <a
+            class="px-2"
+            href="//youtube.com/channel/UCsBrwjLD7ZeOK2AcZoXN7Bw"
+            target="_blank"
+          >
             <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
           </a>
 
@@ -877,7 +881,11 @@
     </b-container>
 
     <div class="d-flex justify-content-center pb-4">
-      <a class="px-2" href="//google.com" target="_blank">
+      <a
+        class="px-2"
+        href="//youtube.com/channel/UCsBrwjLD7ZeOK2AcZoXN7Bw"
+        target="_blank"
+      >
         <b-img-lazy src="/images/social/youtube.svg" fluid></b-img-lazy>
       </a>
 
