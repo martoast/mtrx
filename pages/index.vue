@@ -17,7 +17,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item active style="font-weight: 600" href="#">
+          <!-- <b-nav-item active style="font-weight: 600" href="#">
             Tech
           </b-nav-item>
           <b-nav-item active style="font-weight: 600" href="#">
@@ -25,7 +25,7 @@
           </b-nav-item>
           <b-nav-item active style="font-weight: 600" href="#">
             News
-          </b-nav-item>
+          </b-nav-item> -->
         </b-navbar-nav>
         <b-navbar-nav class="d-none d-md-flex ml-auto">
           <a
@@ -363,22 +363,6 @@
                 connect with their fans around the globe in a whole new way. You
                 no longer have to BE THERE to BE THERE. Enter the MTRXVerse
               </p>
-              <b-button
-                pill
-                class="border-0"
-                style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 700;
-                  font-size: 13px;
-                  background: linear-gradient(
-                    180deg,
-                    rgba(94, 162, 239, 0.8) 0%,
-                    rgba(209, 45, 156, 0.064) 100%
-                  );
-                "
-                >LEARN MORE</b-button
-              >
             </b-col>
 
             <b-col class="ml-auto py-3" cols="12" md="4" sm="12">
@@ -622,7 +606,7 @@
         background-size: cover; /* Resize the background image to cover the entire container */
       "
     >
-      <div class="d-none d-md-block pb-5 mt-5">
+      <div class="d-none d-md-block pb-5 mt-5" style="position: relative">
         <b-card
           no-body
           class="text-white align-items-center"
@@ -689,6 +673,19 @@
             </b-row>
           </div>
         </b-card>
+        <!-- <b-img
+          src="/images/m.png"
+          fluid
+          style="
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            top: 2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+          "
+        ></b-img> -->
       </div>
       <div class="d-block d-md-none py-3">
         <b-card
@@ -766,7 +763,7 @@
     <b-container class="py-5">
       <b-row align-v="center">
         <b-col col md="5" sm="12">
-          <div class="d-flex">
+          <div class="d-flex" style="width: 285px">
             <div>
               <b-img-lazy
                 class="pb-3"
@@ -784,7 +781,8 @@
                 The Bridge Between Metaverse and IRL Events.
               </p>
             </div>
-            <div>
+
+            <!-- <div>
               <b-list-group>
                 <b-list-group-item
                   href="#"
@@ -810,7 +808,7 @@
                   News
                 </b-list-group-item>
               </b-list-group>
-            </div>
+            </div> -->
           </div>
         </b-col>
         <b-col col md="7" sm="12">
@@ -930,7 +928,7 @@
           color: #e0e0e0;
         "
       >
-        2022 MTRX Inc. Allright reserved
+        2022 MTRX Inc. All rights reserved
       </p>
     </div>
   </b-container>
@@ -967,7 +965,7 @@ export default {
         },
         {
           id: 5,
-          link: "/images/carousell4.png",
+          link: "/images/carousell5.png",
         },
       ],
       news: [
