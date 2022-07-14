@@ -552,6 +552,7 @@
             </b-card-img>
             <a
               :href="item.link"
+              target="_blank"
               style="
                 position: absolute;
                 z-index: 10000;
@@ -596,6 +597,7 @@
             </b-card-text>
             <b-button
               :href="item.link"
+              target="_blank"
               variant="light"
               style="font-family: 'Lcd'; font-style: normal; font-weight: 400"
               >Read more</b-button
@@ -970,7 +972,7 @@ export default {
           title: "AP Photos Diplo Hamptons Party",
           subtitle: "subtitle",
           image: "/images/blog1.png",
-          link: "https://bit.ly/APNewsMtrx",
+          link: "https://www.apimages.com/search?query=David+Warren+&entitysearch=&st=ps&eventid=13480049&orderBy=Newest&title=NY%3a+MTRX+and+Anna+Rothschild+present+Diplo+at+a+VIP+party+at+the+MTRX+Metamansion+in+Sag+Harbor%2c+NY+on+July+4th%2c+2022&allfilters=&currItem=6f7fedac579948a3bb70a7736c10a273&toItem=24&fbclid=IwAR3D_sRrK2OBFbaye7l0sUxseeLVkVm9ZEH48h-tsiuF6WJw0_50nBYchpE",
           content:
             "Enjoy all the photos by AP images of our latest metamansion takeover. ",
         },
@@ -979,7 +981,7 @@ export default {
           title: "Parties take over the Hamptons for Fourth of July weekend",
           subtitle: "subtitle",
           image: "/images/blog2.png",
-          link: "https://bit.ly/PageSixMtrx",
+          link: "https://pagesix.com/2022/07/04/diplo-kaia-gerber-and-more-celebs-party-in-the-hamptons-for-fourth-of-july/?utm_campaign=iphone_nyp&utm_source=message_app",
           content:
             "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
         },
@@ -989,7 +991,7 @@ export default {
           subtitle: "subtitle",
           image:
             "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
-          link: "https://bit.ly/PageSixMtrx",
+          link: "#",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         },
