@@ -142,7 +142,8 @@
                 font-size: 30px;
                 line-height: 30px;
                 color: #43ee9c;
-              "
+                text-shadow: 0 0 0.15em #0fa;
+                filter: blur(0.007em);"
             >
               A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
             </h2>
@@ -222,6 +223,8 @@
               font-size: 20px;
               line-height: 30px;
               color: #43ee9c;
+              text-shadow: 0 0 0.15em #0fa;
+              filter: blur(0.007em);
             "
           >
             A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
@@ -233,6 +236,8 @@
               font-weight: 800;
               font-size: 20px;
               line-height: 30px;
+              text-shadow: 0 0 0.15em #0fa;
+              filter: blur(0.007em);
             "
           >
             BE THE FIRST TO KNOW
@@ -326,6 +331,8 @@
                   font-size: 40px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
+                  text-shadow: 0 0 0.15em #0fa;
+                  filter: blur(0.007em);
                 "
               >
                 IT’S YOUR WORLD
@@ -338,6 +345,8 @@
                   font-size: 40px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
+                  text-shadow: 0 0 0.15em #0fa;
+                  filter: blur(0.007em);
                 "
                 class="pb-3"
               >
@@ -394,6 +403,8 @@
                   font-size: 20px;
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
+                  text-shadow: 0 0 0.15em #0fa;
+                  filter: blur(0.007em);
                 "
               >
                 IT’S YOUR WORLD
@@ -407,6 +418,8 @@
 
                   color: rgba(67, 238, 156, 1);
                   margin: 0px;
+                  text-shadow: 0 0 0.15em #0fa;
+                  filter: blur(0.007em);
                 "
                 class="pb-3"
               >
@@ -450,6 +463,8 @@
             font-size: 40px;
             color: #43ee9c;
             letter-spacing: 0.25em;
+            text-shadow: 0 0 0.15em #0fa;
+            filter: blur(0.007em);
           "
         >
           ROADMAP
@@ -464,6 +479,8 @@
             font-size: 20px;
             color: #43ee9c;
             letter-spacing: 0.25em;
+            text-shadow: 0 0 0.15em #0fa;
+            filter: blur(0.007em);
           "
         >
           ROADMAP
