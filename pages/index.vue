@@ -2,11 +2,12 @@
   <b-container>
     <b-navbar toggleable="lg" type="dark" style="background-color: #000000">
       <b-navbar-brand href="#">
-        <img
+        <!-- <img
           src="/images/small-logo.svg"
           class="d-inline-block align-top"
           alt="logo "
-        />
+        /> -->
+          <MtrxLogo style="height: 60px;" />
       </b-navbar-brand>
 
       <b-navbar-toggle
@@ -765,10 +766,7 @@
         <b-col col md="5" sm="12">
           <div class="d-flex" style="width: 285px">
             <div>
-              <b-img-lazy
-                class="pb-3"
-                src="/images/footerlogo.svg"
-              ></b-img-lazy>
+              <MtrxLogo style="height: 120px;" />
               <p
                 class="text-white pb-3"
                 style="
@@ -935,142 +933,127 @@
 </template>
 
 <script>
+import MtrxLogo from '../components/MtrxLogo.vue';
 export default {
-  name: "IndexPage",
-  layout: "main",
-
-  data() {
-    return {
-      play_video: false,
-
-      form: {
-        email: "",
-      },
-      carousell_slides: [
-        {
-          id: 1,
-          link: "/images/carousell1.png",
-        },
-        {
-          id: 2,
-          link: "/images/carousell2.png",
-        },
-        {
-          id: 3,
-          link: "/images/carousell3.png",
-        },
-        {
-          id: 4,
-          link: "/images/carousell4.png",
-        },
-        {
-          id: 5,
-          link: "/images/carousell5.png",
-        },
-      ],
-      news: [
-        {
-          id: 1,
-          title: "AP Photos Diplo Hamptons Party",
-          subtitle: "subtitle",
-          image: "/images/blog1.png",
-          link: "https://www.apimages.com/search?query=David+Warren+&entitysearch=&st=ps&eventid=13480049&orderBy=Newest&title=NY%3a+MTRX+and+Anna+Rothschild+present+Diplo+at+a+VIP+party+at+the+MTRX+Metamansion+in+Sag+Harbor%2c+NY+on+July+4th%2c+2022&allfilters=&currItem=6f7fedac579948a3bb70a7736c10a273&toItem=24&fbclid=IwAR3D_sRrK2OBFbaye7l0sUxseeLVkVm9ZEH48h-tsiuF6WJw0_50nBYchpE",
-          content:
-            "Enjoy all the photos by AP images of our latest metamansion takeover. ",
-        },
-        {
-          id: 2,
-          title: "Parties take over the Hamptons for Fourth of July weekend",
-          subtitle: "subtitle",
-          image: "/images/blog2.png",
-          link: "https://pagesix.com/2022/07/04/diplo-kaia-gerber-and-more-celebs-party-in-the-hamptons-for-fourth-of-july/?utm_campaign=iphone_nyp&utm_source=message_app",
-          content:
-            "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
-        },
-        {
-          id: 3,
-          title: "title of the blog",
-          subtitle: "subtitle",
-          image:
-            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
-          link: "#",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        },
-      ],
-      slide: 0,
-      sliding: null,
-    };
-  },
-  mounted() {
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function () {
-      // Get today's date and time
-      var now = new Date().getTime();
-
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Display the result in the element with id="demo"
-      document.getElementById("timer").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-      // Display the result in the element with id="demo"
-      document.getElementById("timer2").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
-        document.getElementById("timer2").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-  },
-  computed: {
-    emailState() {
-      if (this.form.email) {
-        if (
-          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)
-        ) {
-          return true;
-        }
-
-        return false;
-      }
+    name: "IndexPage",
+    layout: "main",
+    data() {
+        return {
+            play_video: false,
+            form: {
+                email: "",
+            },
+            carousell_slides: [
+                {
+                    id: 1,
+                    link: "/images/carousell1.png",
+                },
+                {
+                    id: 2,
+                    link: "/images/carousell2.png",
+                },
+                {
+                    id: 3,
+                    link: "/images/carousell3.png",
+                },
+                {
+                    id: 4,
+                    link: "/images/carousell4.png",
+                },
+                {
+                    id: 5,
+                    link: "/images/carousell5.png",
+                },
+            ],
+            news: [
+                {
+                    id: 1,
+                    title: "AP Photos Diplo Hamptons Party",
+                    subtitle: "subtitle",
+                    image: "/images/blog1.png",
+                    link: "https://www.apimages.com/search?query=David+Warren+&entitysearch=&st=ps&eventid=13480049&orderBy=Newest&title=NY:+MTRX+and+Anna+Rothschild+present+Diplo+at+a+VIP+party+at+the+MTRX+Metamansion+in+Sag+Harbor,+NY+on+July+4th,+2022&allfilters=&currItem=6f7fedac579948a3bb70a7736c10a273&toItem=24&fbclid=IwAR3D_sRrK2OBFbaye7l0sUxseeLVkVm9ZEH48h-tsiuF6WJw0_50nBYchpE",
+                    content: "Enjoy all the photos by AP images of our latest metamansion takeover. ",
+                },
+                {
+                    id: 2,
+                    title: "Parties take over the Hamptons for Fourth of July weekend",
+                    subtitle: "subtitle",
+                    image: "/images/blog2.png",
+                    link: "https://pagesix.com/2022/07/04/diplo-kaia-gerber-and-more-celebs-party-in-the-hamptons-for-fourth-of-july/?utm_campaign=iphone_nyp&utm_source=message_app",
+                    content: "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
+                },
+                {
+                    id: 3,
+                    title: "title of the blog",
+                    subtitle: "subtitle",
+                    image: "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
+                    link: "#",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                },
+            ],
+            slide: 0,
+            sliding: null,
+        };
     },
-  },
-  methods: {
-    onplayVideo() {
-      this.play_video = true;
+    mounted() {
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the element with id="demo"
+            document.getElementById("timer").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            // Display the result in the element with id="demo"
+            document.getElementById("timer2").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+                document.getElementById("timer2").innerHTML = "EXPIRED";
+            }
+        }, 1000);
     },
-    onSubmit(event) {
-      event.preventDefault();
-      alert(JSON.stringify(this.form));
+    computed: {
+        emailState() {
+            if (this.form.email) {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
+                    return true;
+                }
+                return false;
+            }
+        },
     },
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.email = "";
+    methods: {
+        onplayVideo() {
+            this.play_video = true;
+        },
+        onSubmit(event) {
+            event.preventDefault();
+            alert(JSON.stringify(this.form));
+        },
+        onReset(event) {
+            event.preventDefault();
+            // Reset our form values
+            this.form.email = "";
+        },
+        onSlideStart(slide) {
+            this.sliding = true;
+        },
+        onSlideEnd(slide) {
+            this.sliding = false;
+        },
     },
-    onSlideStart(slide) {
-      this.sliding = true;
-    },
-    onSlideEnd(slide) {
-      this.sliding = false;
-    },
-  },
+    components: { MtrxLogo }
 };
 </script>
 
