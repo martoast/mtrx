@@ -248,7 +248,11 @@
             SIGN UP NOW
           </h2>
 
-          <h4 class="text-white pb-3" id="timer2"></h4>
+          <h4
+            class="text-white pb-3"
+            style="font-family: 'Inter'"
+            id="timer2"
+          ></h4>
 
           <b-form
             style="justify-content: center"
@@ -599,7 +603,7 @@
               :href="item.link"
               target="_blank"
               variant="light"
-              style="font-family: 'Lcd'; font-style: normal; font-weight: 400"
+              style="font-family: 'Inter'; font-style: normal; font-weight: 400"
               >Read more</b-button
             >
           </div>
