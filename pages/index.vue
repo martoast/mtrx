@@ -7,7 +7,7 @@
           class="d-inline-block align-top"
           alt="logo "
         /> -->
-          <MtrxLogo style="height: 60px;" />
+        <MtrxLogo style="height: 60px" />
       </b-navbar-brand>
 
       <b-navbar-toggle
@@ -143,7 +143,8 @@
                 line-height: 30px;
                 color: #43ee9c;
                 text-shadow: 0 0 0.15em #0fa;
-                filter: blur(0.007em);"
+                filter: blur(0.007em);
+              "
             >
               A METAVERSE MADE FOR THE ARTIST, BY ARTISTS.
             </h2>
@@ -172,39 +173,51 @@
 
             <h4 class="text-white pb-3" id="timer"></h4>
 
-            <b-form inline @submit="onSubmit" @reset="onReset">
-              <b-form-input
-                style="
-                  background-color: transparent;
-                  border-color: #6e0095;
-                  font-family: 'Lcd';
-                  line-height: 33px;
-                  font-size: 22px;
-                "
-                :class="emailState ? 'text-white' : 'text-gray'"
-                id="input-1"
-                v-model="form.email"
-                :state="emailState"
-                type="email"
-                placeholder="EMAIL"
-                required
-              ></b-form-input>
+            <mailchimp-subscribe
+              url="https://mtrxverse.us9.list-manage.com/subscribe/post-json"
+              user-id="e21337cbe4c69f86f9ca3f6f2"
+              list-id="94ed62df3d"
+              @error="onError"
+              @success="onSuccess"
+            >
+              <template
+                v-slot="{ subscribe, setEmail, error, success, loading }"
+              >
+                <b-form inline>
+                  <b-form-input
+                    style="
+                      background-color: transparent;
+                      border-color: #6e0095;
+                      font-family: 'Lcd';
+                      line-height: 33px;
+                      font-size: 22px;
+                    "
+                    :class="emailState ? 'text-white' : 'text-gray'"
+                    id="input-1"
+                    v-model="form.email"
+                    :state="emailState"
+                    type="email"
+                    placeholder="EMAIL"
+                    required
+                  ></b-form-input>
 
-              <b-button
-                :disabled="!emailState"
-                class="ml-3"
-                style="
-                  background-color: #00c0f9;
-                  border-color: #00c0f9;
-                  font-family: 'Open Sans';
-                  font-style: italic;
-                  font-weight: 300;
-                  font-size: 22px;
-                  line-height: 33px;
-                "
-                >ENTER THE MTRX
-              </b-button>
-            </b-form>
+                  <b-button
+                    :disabled="!emailState"
+                    class="ml-3"
+                    style="
+                      background-color: #00c0f9;
+                      border-color: #00c0f9;
+                      font-family: 'Open Sans';
+                      font-style: italic;
+                      font-weight: 300;
+                      font-size: 22px;
+                      line-height: 33px;
+                    "
+                    >ENTER THE MTRX
+                  </b-button>
+                </b-form>
+              </template>
+            </mailchimp-subscribe>
           </b-col>
         </b-row>
       </div>
@@ -260,48 +273,50 @@
             id="timer2"
           ></h4>
 
-          <b-form
-            style="justify-content: center"
-            class="pb-4"
-            inline
-            @submit="onSubmit"
-            @reset="onReset"
+          <mailchimp-subscribe
+            url="https://mtrxverse.us9.list-manage.com/subscribe/post-json"
+            user-id="e21337cbe4c69f86f9ca3f6f2"
+            list-id="94ed62df3d"
+            @error="onError"
+            @success="onSuccess"
           >
-            <b-form-input
-              style="
-                background-color: transparent;
-                border-color: #6e0095;
-                font-family: 'Lcd';
-                font-style: italic;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 33px;
-              "
-              :class="emailState ? 'text-white' : 'text-gray'"
-              id="input-1"
-              v-model="form.email"
-              :state="emailState"
-              type="email"
-              placeholder="EMAIL"
-              required
-            ></b-form-input>
+            <template v-slot="{ subscribe, setEmail, error, success, loading }">
+              <b-form inline>
+                <b-form-input
+                  style="
+                    background-color: transparent;
+                    border-color: #6e0095;
+                    font-family: 'Lcd';
+                    line-height: 33px;
+                    font-size: 22px;
+                  "
+                  :class="emailState ? 'text-white' : 'text-gray'"
+                  id="input-1"
+                  v-model="form.email"
+                  :state="emailState"
+                  type="email"
+                  placeholder="EMAIL"
+                  required
+                ></b-form-input>
 
-            <b-button
-              :disabled="!emailState"
-              block
-              class="d-block d-md-none mt-3"
-              style="
-                background-color: #00c0f9;
-                border-color: #00c0f9;
-                font-family: 'Inter';
-                font-style: italic;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 33px;
-              "
-              >ENTER THE MTRX
-            </b-button>
-          </b-form>
+                <b-button
+                  :disabled="!emailState"
+                  block
+                  class="my-3"
+                  style="
+                    background-color: #00c0f9;
+                    border-color: #00c0f9;
+                    font-family: 'Open Sans';
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 22px;
+                    line-height: 33px;
+                  "
+                  >ENTER THE MTRX
+                </b-button>
+              </b-form>
+            </template>
+          </mailchimp-subscribe>
         </b-col>
         <b-col cols="12" md="6" sm="12">
           <div class="p-2">
@@ -783,7 +798,7 @@
         <b-col col md="5" sm="12">
           <div class="d-flex" style="width: 285px">
             <div>
-              <MtrxLogo style="height: 120px;" />
+              <MtrxLogo style="height: 120px" />
               <p
                 class="text-white pb-3"
                 style="
@@ -843,58 +858,69 @@
           >
             JOIN THE WAITLIST
           </h2>
-          <b-form
-            style="justify-content: center"
-            inline
-            @submit="onSubmit"
-            @reset="onReset"
+
+          <mailchimp-subscribe
+            url="https://mtrxverse.us9.list-manage.com/subscribe/post-json"
+            user-id="e21337cbe4c69f86f9ca3f6f2"
+            list-id="94ed62df3d"
+            @error="onError"
+            @success="onSuccess"
           >
-            <b-form-input
-              style="
-                background-color: transparent;
-                border-color: #6e0095;
-                font-family: 'Lcd';
-                font-style: italic;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 33px;
-              "
-              id="input-1"
-              v-model="form.email"
-              :state="emailState"
-              type="email"
-              placeholder="EMAIL"
-              required
-            ></b-form-input>
+            <template v-slot="{ subscribe, setEmail, error, success, loading }">
+              <b-form
+                style="justify-content: center"
+                inline
+                @submit="onSubmit"
+                @reset="onReset"
+              >
+                <b-form-input
+                  style="
+                    background-color: transparent;
+                    border-color: #6e0095;
+                    font-family: 'Lcd';
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 33px;
+                  "
+                  id="input-1"
+                  v-model="form.email"
+                  :state="emailState"
+                  type="email"
+                  placeholder="EMAIL"
+                  required
+                ></b-form-input>
 
-            <b-button
-              :disabled="!emailState"
-              class="d-none d-md-block ml-3"
-              style="
-                background-color: #00c0f9;
-                border-color: #00c0f9;
-                font-family: 'Inter';
-                font-style: italic;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 33px;
-              "
-              >ENTER THE MTRX
-            </b-button>
+                <b-button
+                  :disabled="!emailState"
+                  class="d-none d-md-block ml-3"
+                  style="
+                    background-color: #00c0f9;
+                    border-color: #00c0f9;
+                    font-family: 'Inter';
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 33px;
+                  "
+                  >ENTER THE MTRX
+                </b-button>
 
-            <b-button
-              :disabled="!emailState"
-              block
-              class="d-block d-md-none mt-3"
-              style="
-                background-color: #00c0f9;
-                border-color: #00c0f9;
-                font-family: 'Inter';
-                font-style: italic;
-              "
-              >Enter the MTRX
-            </b-button>
-          </b-form>
+                <b-button
+                  :disabled="!emailState"
+                  block
+                  class="d-block d-md-none mt-3"
+                  style="
+                    background-color: #00c0f9;
+                    border-color: #00c0f9;
+                    font-family: 'Inter';
+                    font-style: italic;
+                  "
+                  >Enter the MTRX
+                </b-button>
+              </b-form>
+            </template>
+          </mailchimp-subscribe>
         </b-col>
       </b-row>
     </b-container>
@@ -950,127 +976,142 @@
 </template>
 
 <script>
-import MtrxLogo from '../components/MtrxLogo.vue';
+import MtrxLogo from "../components/MtrxLogo.vue";
+import MailchimpSubscribe from "vue-mailchimp-subscribe";
 export default {
-    name: "IndexPage",
-    layout: "main",
-    data() {
-        return {
-            play_video: false,
-            form: {
-                email: "",
-            },
-            carousell_slides: [
-                {
-                    id: 1,
-                    link: "/images/carousell1.png",
-                },
-                {
-                    id: 2,
-                    link: "/images/carousell2.png",
-                },
-                {
-                    id: 3,
-                    link: "/images/carousell3.png",
-                },
-                {
-                    id: 4,
-                    link: "/images/carousell4.png",
-                },
-                {
-                    id: 5,
-                    link: "/images/carousell5.png",
-                },
-            ],
-            news: [
-                {
-                    id: 1,
-                    title: "AP Photos Diplo Hamptons Party",
-                    subtitle: "subtitle",
-                    image: "/images/blog1.png",
-                    link: "https://www.apimages.com/search?query=David+Warren+&entitysearch=&st=ps&eventid=13480049&orderBy=Newest&title=NY:+MTRX+and+Anna+Rothschild+present+Diplo+at+a+VIP+party+at+the+MTRX+Metamansion+in+Sag+Harbor,+NY+on+July+4th,+2022&allfilters=&currItem=6f7fedac579948a3bb70a7736c10a273&toItem=24&fbclid=IwAR3D_sRrK2OBFbaye7l0sUxseeLVkVm9ZEH48h-tsiuF6WJw0_50nBYchpE",
-                    content: "Enjoy all the photos by AP images of our latest metamansion takeover. ",
-                },
-                {
-                    id: 2,
-                    title: "Parties take over the Hamptons for Fourth of July weekend",
-                    subtitle: "subtitle",
-                    image: "/images/blog2.png",
-                    link: "https://pagesix.com/2022/07/04/diplo-kaia-gerber-and-more-celebs-party-in-the-hamptons-for-fourth-of-july/?utm_campaign=iphone_nyp&utm_source=message_app",
-                    content: "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
-                },
-                {
-                    id: 3,
-                    title: "title of the blog",
-                    subtitle: "subtitle",
-                    image: "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
-                    link: "#",
-                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-                },
-            ],
-            slide: 0,
-            sliding: null,
-        };
+  name: "IndexPage",
+  layout: "main",
+  components: { MtrxLogo, MailchimpSubscribe },
+  data() {
+    return {
+      play_video: false,
+      form: {
+        email: "",
+      },
+      carousell_slides: [
+        {
+          id: 1,
+          link: "/images/carousell1.png",
+        },
+        {
+          id: 2,
+          link: "/images/carousell2.png",
+        },
+        {
+          id: 3,
+          link: "/images/carousell3.png",
+        },
+        {
+          id: 4,
+          link: "/images/carousell4.png",
+        },
+        {
+          id: 5,
+          link: "/images/carousell5.png",
+        },
+      ],
+      news: [
+        {
+          id: 1,
+          title: "AP Photos Diplo Hamptons Party",
+          subtitle: "subtitle",
+          image: "/images/blog1.png",
+          link: "https://www.apimages.com/search?query=David+Warren+&entitysearch=&st=ps&eventid=13480049&orderBy=Newest&title=NY:+MTRX+and+Anna+Rothschild+present+Diplo+at+a+VIP+party+at+the+MTRX+Metamansion+in+Sag+Harbor,+NY+on+July+4th,+2022&allfilters=&currItem=6f7fedac579948a3bb70a7736c10a273&toItem=24&fbclid=IwAR3D_sRrK2OBFbaye7l0sUxseeLVkVm9ZEH48h-tsiuF6WJw0_50nBYchpE",
+          content:
+            "Enjoy all the photos by AP images of our latest metamansion takeover. ",
+        },
+        {
+          id: 2,
+          title: "Parties take over the Hamptons for Fourth of July weekend",
+          subtitle: "subtitle",
+          image: "/images/blog2.png",
+          link: "https://pagesix.com/2022/07/04/diplo-kaia-gerber-and-more-celebs-party-in-the-hamptons-for-fourth-of-july/?utm_campaign=iphone_nyp&utm_source=message_app",
+          content:
+            "Over the Fourth of July holiday weekend, hospitality guru Richie Akiva and Ronnie Madra threw a bash at Kissaki in Water Mill.",
+        },
+        {
+          id: 3,
+          title: "title of the blog",
+          subtitle: "subtitle",
+          image:
+            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
+          link: "#",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        },
+      ],
+      slide: 0,
+      sliding: null,
+    };
+  },
+  mounted() {
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      // Display the result in the element with id="demo"
+      document.getElementById("timer").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      // Display the result in the element with id="demo"
+      document.getElementById("timer2").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("timer2").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  },
+  computed: {
+    emailState() {
+      if (this.form.email) {
+        if (
+          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)
+        ) {
+          return true;
+        }
+        return false;
+      }
     },
-    mounted() {
-        // Set the date we're counting down to
-        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-            // Get today's date and time
-            var now = new Date().getTime();
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            // Display the result in the element with id="demo"
-            document.getElementById("timer").innerHTML =
-                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-            // Display the result in the element with id="demo"
-            document.getElementById("timer2").innerHTML =
-                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "EXPIRED";
-                document.getElementById("timer2").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+  },
+  methods: {
+    onplayVideo() {
+      this.play_video = true;
     },
-    computed: {
-        emailState() {
-            if (this.form.email) {
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
-                    return true;
-                }
-                return false;
-            }
-        },
+    onSubmit(event) {
+      event.preventDefault();
+      alert(JSON.stringify(this.form));
     },
-    methods: {
-        onplayVideo() {
-            this.play_video = true;
-        },
-        onSubmit(event) {
-            event.preventDefault();
-            alert(JSON.stringify(this.form));
-        },
-        onReset(event) {
-            event.preventDefault();
-            // Reset our form values
-            this.form.email = "";
-        },
-        onSlideStart(slide) {
-            this.sliding = true;
-        },
-        onSlideEnd(slide) {
-            this.sliding = false;
-        },
+    onReset(event) {
+      event.preventDefault();
+      // Reset our form values
+      this.form.email = "";
     },
-    components: { MtrxLogo }
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
+    onError() {
+      console.log("error");
+    },
+    onSuccess() {
+      console.log("success");
+    },
+  },
 };
 </script>
 
