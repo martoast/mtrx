@@ -352,26 +352,42 @@
               >
                 AND ITS YOUR STAGE
               </h2>
-
-              <p
+<p
                 style="
-                  font-family: 'inter';
+                  font-family: 'Inter';
                   font-style: normal;
-                  font-weight: 700;
-                  font-size: 18px;
+                  font-weight: 800;
+                  font-size: 15px;
                   line-height: 30px;
                 "
                 class="pb-2"
               >
-                Welcome to the MTRXVerse, the ultimate talent and performance
-                Metaverse built by actual music industry artists to help
-                creators share their world with the world; no matter the
-                location. From fully customizable performance stages, to fashion
-                airdrops, to brand sponsored immersive activations, to full on
-                music festivals with custom effects the MTRXVERSE is the
-                ultimate home for the next generation of artists to directly
-                connect with their fans around the globe in a whole new way. You
-                no longer have to BE THERE to BE THERE. Enter the MTRXVerse
+              Welcome to the MTRXVerse, the ultimate live entertainment metaverse built by actual industry professionals to help creators share THEIR world, 
+                with THE world; no matter the location. From fully customizable performances stages, to fashion airdrops, to brand sponsored immersive activations, 
+                to full on music festivals with custom effects: The MTRXVerse is the ultimate home for the next generation of creators to directly connect with their 
+                fans around the globe in a whole new way.
+                </p><p
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 15px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
+                You no longer have to “Be there” to “Be there”
+                </p><p
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 15px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
+                Enter the MTRXVerse
               </p>
             </b-col>
 
@@ -431,15 +447,37 @@
                   font-family: 'Inter';
                   font-style: normal;
                   font-weight: 800;
-                  font-size: 20px;
+                  font-size: 15px;
                   line-height: 30px;
                 "
                 class="pb-2"
               >
-                Welcome to the MTRXVerse, the ultimate talent and performance
-                Metaverse built by actual music industry artists to help
-                creators share their world with the world; no matter the
-                location.
+                Welcome to the MTRXVerse, the ultimate live entertainment metaverse built by actual industry professionals to help creators share THEIR world, 
+                with THE world; no matter the location. From fully customizable performances stages, to fashion airdrops, to brand sponsored immersive activations, 
+                to full on music festivals with custom effects: The MTRXVerse is the ultimate home for the next generation of creators to directly connect with their 
+                fans around the globe in a whole new way.
+                </p><p
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 15px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
+                You no longer have to “Be there” to “Be there”
+                </p><p
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 15px;
+                  line-height: 30px;
+                "
+                class="pb-2"
+              >
+                Enter the MTRXVerse
               </p>
             </b-col>
           </b-row>
@@ -664,19 +702,37 @@
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 32px;
+                    font-size: 15px;
                     line-height: 30px;
-                    font-weight: 700;
-                    letter-spacing: -0.015em;
-                    font-size: 22px;
                   "
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore
+                  Klaytn is a public blockchain focused on the
+                  metaverse, gamefi, and the creator economy.
+                  Developed by internet giant Kakao Corp,
+                  Klaytn is the dominant blockchain platform in
+                  South Korea and is undergoing global growth
+                  from its international base in Singapore.
+                </p><p
+                  style="
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 30px;
+                  ">
+                  To empower all who wish to build, work, or play
+                  in the metaverse, the Klaytn Foundation
+                  provides support to developers, entrepreneurs,
+                  and content creators via the Klaytn Growth Fund. 
+                  </p><p
+                  style="
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 30px;
+                  ">
+                  Dive into the world of Klaytn, and let's play
                 </p>
               </b-col>
 
@@ -761,15 +817,35 @@
                     font-weight: 700;
                     font-size: 15px;
                     line-height: 30px;
-                    text-align: justify;
                   "
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore
+                  Klaytn is a public blockchain focused on the
+                  metaverse, gamefi, and the creator economy.
+                  Developed by internet giant Kakao Corp,
+                  Klaytn is the dominant blockchain platform in
+                  South Korea and is undergoing global growth
+                  from its international base in Singapore.
+                </p><p
+                  style="
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 30px;
+                  ">
+                  To empower all who wish to build, work, or play
+                  in the metaverse, the Klaytn Foundation
+                  provides support to developers, entrepreneurs,
+                  and content creators via the Klaytn Growth Fund. 
+                  </p><p
+                  style="
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 30px;
+                  ">
+                  Dive into the world of Klaytn, and let's play
                 </p>
               </b-col>
             </b-row>
