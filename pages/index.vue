@@ -183,7 +183,7 @@
               <template
                 v-slot="{ subscribe, setEmail, error, success, loading }"
               >
-                <b-form inline @reset="onReset">
+                <b-form inline @reset="onReset" @submit.prevent="subscribe">
                   <b-form-input
                     style="
                       background-color: transparent;
@@ -196,14 +196,20 @@
                     "
                     id="input-1"
                     v-model="form.email"
+                    @input="setEmail"
                     :state="emailState"
                     type="email"
                     placeholder="EMAIL"
                     required
                   ></b-form-input>
 
+                  <div v-if="error" class="text-danger pt-1">
+                    {{ error }}
+                  </div>
+
                   <b-button
                     :disabled="!emailState"
+                    type="submit"
                     class="d-none d-md-block mt-3"
                     style="
                       background-color: #00c0f9;
@@ -282,7 +288,7 @@
             @success="onSuccess"
           >
             <template v-slot="{ subscribe, setEmail, error, success, loading }">
-              <b-form inline @reset="onReset">
+              <b-form inline @reset="onReset" @submit.prevent="subscribe">
                 <b-form-input
                   style="
                     background-color: transparent;
@@ -294,16 +300,22 @@
                   :class="emailState ? 'text-white' : 'text-gray'"
                   id="input-1"
                   v-model="form.email"
+                  @input="setEmail"
                   :state="emailState"
                   type="email"
                   placeholder="EMAIL"
                   required
                 ></b-form-input>
 
+                <div v-if="error" class="text-danger pt-1">
+                  {{ error }}
+                </div>
+
                 <b-button
                   :disabled="!emailState"
                   block
                   class="my-3"
+                  type="submit"
                   style="
                     background-color: #00c0f9;
                     border-color: #00c0f9;
@@ -966,7 +978,12 @@
             @success="onSuccess"
           >
             <template v-slot="{ subscribe, setEmail, error, success, loading }">
-              <b-form style="justify-content: center" inline @reset="onReset">
+              <b-form
+                @submit.prevent="subscribe"
+                style="justify-content: center"
+                inline
+                @reset="onReset"
+              >
                 <b-form-input
                   style="
                     background-color: transparent;
@@ -979,15 +996,21 @@
                   "
                   id="input-1"
                   v-model="form.email"
+                  @input="setEmail"
                   :state="emailState"
                   type="email"
                   placeholder="EMAIL"
                   required
                 ></b-form-input>
 
+                <div v-if="error" class="text-danger pt-1">
+                  {{ error }}
+                </div>
+
                 <b-button
                   :disabled="!emailState"
                   class="d-none d-md-block ml-3"
+                  type="submit"
                   style="
                     background-color: #00c0f9;
                     border-color: #00c0f9;
@@ -1003,6 +1026,7 @@
                 <b-button
                   :disabled="!emailState"
                   block
+                  type="submit"
                   class="d-block d-md-none mt-3"
                   style="
                     background-color: #00c0f9;
@@ -1210,6 +1234,9 @@ export default {
     onSuccess() {
       console.log("success");
       this.$root.$bvToast.show("toast-email-saved");
+    },
+    onEmailChange(event) {
+      console.log(event);
     },
   },
 };
