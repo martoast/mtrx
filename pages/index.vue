@@ -33,7 +33,7 @@
           <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
             <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
           </a>
-          
+
           <a
             class="px-2"
             href="//youtube.com/channel/UCsBrwjLD7ZeOK2AcZoXN7Bw"
@@ -416,11 +416,12 @@
             </b-col>
 
             <b-col class="ml-auto py-3" cols="12" md="4" sm="12">
-              <b-img-lazy
+              <MLogo style="width: 230px;" />
+              <!-- <b-img-lazy
                 src="/images/banner-logo.svg"
                 fluid
                 alt="Fluid image"
-              ></b-img-lazy>
+              ></b-img-lazy> -->
             </b-col>
           </b-row>
         </b-card>
@@ -1080,10 +1081,11 @@
 import MtrxLogo from "../components/MtrxLogo.vue";
 import MailchimpSubscribe from "vue-mailchimp-subscribe";
 import Toast from "~/components/Toast";
+import MLogo from "../components/MLogo.vue";
 export default {
   name: "IndexPage",
   layout: "main",
-  components: { MtrxLogo, MailchimpSubscribe, Toast },
+  components: { MtrxLogo, MailchimpSubscribe, Toast, MLogo },
   data() {
     return {
       play_video: false,
