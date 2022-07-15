@@ -29,6 +29,11 @@
           </b-nav-item> -->
         </b-navbar-nav>
         <b-navbar-nav class="d-none d-md-flex ml-auto">
+
+          <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
+            <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
+          </a>
+          
           <a
             class="px-2"
             href="//youtube.com/channel/UCsBrwjLD7ZeOK2AcZoXN7Bw"
@@ -49,17 +54,13 @@
             <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
           </a>
 
-          <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
+          <!-- <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
             <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
-          </a>
+          </a> -->
 
-          <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
-            <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
-          </a>
-
-          <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
+          <!-- <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
             <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
-          </a>
+          </a> -->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -1018,6 +1019,11 @@
     </b-container>
 
     <div class="d-flex justify-content-center pb-4">
+
+      <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
+        <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
+      </a>
+
       <a
         class="px-2"
         href="//youtube.com/channel/UCsBrwjLD7ZeOK2AcZoXN7Bw"
@@ -1038,17 +1044,13 @@
         <b-img-lazy src="/images/social/twitter.svg"></b-img-lazy>
       </a>
 
-      <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
+      <!-- <a class="px-2" href="//twitch.com/mtrxverse" target="_blank">
         <b-img-lazy src="/images/social/twitch.svg"></b-img-lazy>
-      </a>
+      </a> -->
 
-      <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
-        <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
-      </a>
-
-      <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
+      <!-- <a class="px-2" href="//discord.gg/SJn7naaQ" target="_blank">
         <b-img-lazy src="/images/social/discord.svg"></b-img-lazy>
-      </a>
+      </a> -->
     </div>
     <div class="pb-3">
       <p
