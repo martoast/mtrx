@@ -1,15 +1,25 @@
+import global from "./utils/global";
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
   head: {
-    title: "mtrx",
+    title: "MTRXverse - The Bridge Between In Real Life Events & Metaverse",
     htmlAttrs: {
       lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content: global.site.description || "",
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content: global.site.keywords || "",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

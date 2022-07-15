@@ -1135,13 +1135,12 @@ export default {
         },
         {
           id: 3,
-          title: "title of the blog",
+          title: "Enter MTRX: You Don’t Have To Be There, To Be There",
           subtitle: "subtitle",
-          image:
-            "https://i.picsum.photos/id/41/300/300.jpg?hmac=btJpFIxxGUDXvakI9MK1mRAP0Mmwhgk_o34Ps2vkhxA",
-          link: "#",
+          image: "/images/article3.png",
+          link: "https://edmmaniac.com/enter-mtrx/",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "Imagine a world where access to your favorite live experiences were always available and you were no longer bound by physical or financial limitations? ",
         },
       ],
       slide: 0,
