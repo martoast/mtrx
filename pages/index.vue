@@ -183,16 +183,17 @@
               <template
                 v-slot="{ subscribe, setEmail, error, success, loading }"
               >
-                <b-form inline>
+                <b-form inline @reset="onReset">
                   <b-form-input
                     style="
                       background-color: transparent;
                       border-color: #6e0095;
                       font-family: 'Lcd';
+                      font-style: italic;
+                      font-weight: 300;
+                      font-size: 24px;
                       line-height: 33px;
-                      font-size: 22px;
                     "
-                    :class="emailState ? 'text-white' : 'text-gray'"
                     id="input-1"
                     v-model="form.email"
                     :state="emailState"
@@ -203,14 +204,14 @@
 
                   <b-button
                     :disabled="!emailState"
-                    class="ml-3"
+                    class="d-none d-md-block mt-3"
                     style="
                       background-color: #00c0f9;
                       border-color: #00c0f9;
-                      font-family: 'Open Sans';
+                      font-family: 'Inter';
                       font-style: italic;
                       font-weight: 300;
-                      font-size: 22px;
+                      font-size: 20px;
                       line-height: 33px;
                     "
                     >ENTER THE MTRX
@@ -281,7 +282,7 @@
             @success="onSuccess"
           >
             <template v-slot="{ subscribe, setEmail, error, success, loading }">
-              <b-form inline>
+              <b-form inline @reset="onReset">
                 <b-form-input
                   style="
                     background-color: transparent;
@@ -367,7 +368,7 @@
               >
                 AND ITS YOUR STAGE
               </h2>
-<p
+              <p
                 style="
                   font-family: 'Inter';
                   font-style: normal;
@@ -377,11 +378,17 @@
                 "
                 class="pb-2"
               >
-              Welcome to the MTRXVerse, the ultimate live entertainment metaverse built by actual industry professionals to help creators share THEIR world, 
-                with THE world; no matter the location. From fully customizable performances stages, to fashion airdrops, to brand sponsored immersive activations, 
-                to full on music festivals with custom effects: The MTRXVerse is the ultimate home for the next generation of creators to directly connect with their 
-                fans around the globe in a whole new way.
-                </p><p
+                Welcome to the MTRXVerse, the ultimate live entertainment
+                metaverse built by actual industry professionals to help
+                creators share THEIR world, with THE world; no matter the
+                location. From fully customizable performances stages, to
+                fashion airdrops, to brand sponsored immersive activations, to
+                full on music festivals with custom effects: The MTRXVerse is
+                the ultimate home for the next generation of creators to
+                directly connect with their fans around the globe in a whole new
+                way.
+              </p>
+              <p
                 style="
                   font-family: 'Inter';
                   font-style: normal;
@@ -392,7 +399,8 @@
                 class="pb-2"
               >
                 You no longer have to “Be there” to “Be there”
-                </p><p
+              </p>
+              <p
                 style="
                   font-family: 'Inter';
                   font-style: normal;
@@ -467,11 +475,17 @@
                 "
                 class="pb-2"
               >
-                Welcome to the MTRXVerse, the ultimate live entertainment metaverse built by actual industry professionals to help creators share THEIR world, 
-                with THE world; no matter the location. From fully customizable performances stages, to fashion airdrops, to brand sponsored immersive activations, 
-                to full on music festivals with custom effects: The MTRXVerse is the ultimate home for the next generation of creators to directly connect with their 
-                fans around the globe in a whole new way.
-                </p><p
+                Welcome to the MTRXVerse, the ultimate live entertainment
+                metaverse built by actual industry professionals to help
+                creators share THEIR world, with THE world; no matter the
+                location. From fully customizable performances stages, to
+                fashion airdrops, to brand sponsored immersive activations, to
+                full on music festivals with custom effects: The MTRXVerse is
+                the ultimate home for the next generation of creators to
+                directly connect with their fans around the globe in a whole new
+                way.
+              </p>
+              <p
                 style="
                   font-family: 'Inter';
                   font-style: normal;
@@ -482,7 +496,8 @@
                 class="pb-2"
               >
                 You no longer have to “Be there” to “Be there”
-                </p><p
+              </p>
+              <p
                 style="
                   font-family: 'Inter';
                   font-style: normal;
@@ -721,32 +736,35 @@
                     line-height: 30px;
                   "
                 >
-                  Klaytn is a public blockchain focused on the
-                  metaverse, gamefi, and the creator economy.
-                  Developed by internet giant Kakao Corp,
-                  Klaytn is the dominant blockchain platform in
-                  South Korea and is undergoing global growth
-                  from its international base in Singapore.
-                </p><p
+                  Klaytn is a public blockchain focused on the metaverse,
+                  gamefi, and the creator economy. Developed by internet giant
+                  Kakao Corp, Klaytn is the dominant blockchain platform in
+                  South Korea and is undergoing global growth from its
+                  international base in Singapore.
+                </p>
+                <p
                   style="
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15px;
                     line-height: 30px;
-                  ">
-                  To empower all who wish to build, work, or play
-                  in the metaverse, the Klaytn Foundation
-                  provides support to developers, entrepreneurs,
-                  and content creators via the Klaytn Growth Fund. 
-                  </p><p
+                  "
+                >
+                  To empower all who wish to build, work, or play in the
+                  metaverse, the Klaytn Foundation provides support to
+                  developers, entrepreneurs, and content creators via the Klaytn
+                  Growth Fund.
+                </p>
+                <p
                   style="
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15px;
                     line-height: 30px;
-                  ">
+                  "
+                >
                   Dive into the world of Klaytn, and let's play
                 </p>
               </b-col>
@@ -834,32 +852,35 @@
                     line-height: 30px;
                   "
                 >
-                  Klaytn is a public blockchain focused on the
-                  metaverse, gamefi, and the creator economy.
-                  Developed by internet giant Kakao Corp,
-                  Klaytn is the dominant blockchain platform in
-                  South Korea and is undergoing global growth
-                  from its international base in Singapore.
-                </p><p
+                  Klaytn is a public blockchain focused on the metaverse,
+                  gamefi, and the creator economy. Developed by internet giant
+                  Kakao Corp, Klaytn is the dominant blockchain platform in
+                  South Korea and is undergoing global growth from its
+                  international base in Singapore.
+                </p>
+                <p
                   style="
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15px;
                     line-height: 30px;
-                  ">
-                  To empower all who wish to build, work, or play
-                  in the metaverse, the Klaytn Foundation
-                  provides support to developers, entrepreneurs,
-                  and content creators via the Klaytn Growth Fund. 
-                  </p><p
+                  "
+                >
+                  To empower all who wish to build, work, or play in the
+                  metaverse, the Klaytn Foundation provides support to
+                  developers, entrepreneurs, and content creators via the Klaytn
+                  Growth Fund.
+                </p>
+                <p
                   style="
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15px;
                     line-height: 30px;
-                  ">
+                  "
+                >
                   Dive into the world of Klaytn, and let's play
                 </p>
               </b-col>
@@ -943,12 +964,7 @@
             @success="onSuccess"
           >
             <template v-slot="{ subscribe, setEmail, error, success, loading }">
-              <b-form
-                style="justify-content: center"
-                inline
-                @submit="onSubmit"
-                @reset="onReset"
-              >
+              <b-form style="justify-content: center" inline @reset="onReset">
                 <b-form-input
                   style="
                     background-color: transparent;
@@ -1048,16 +1064,24 @@
         2022 MTRX Inc. All rights reserved
       </p>
     </div>
+    <toast
+      id="toast-email-saved"
+      title="Registered successfully"
+      body="Your email has been successfully registered."
+      variant="success"
+      icon="check-circle-fill"
+    ></toast>
   </b-container>
 </template>
 
 <script>
 import MtrxLogo from "../components/MtrxLogo.vue";
 import MailchimpSubscribe from "vue-mailchimp-subscribe";
+import Toast from "~/components/Toast";
 export default {
   name: "IndexPage",
   layout: "main",
-  components: { MtrxLogo, MailchimpSubscribe },
+  components: { MtrxLogo, MailchimpSubscribe, Toast },
   data() {
     return {
       play_video: false,
@@ -1122,7 +1146,7 @@ export default {
   },
   mounted() {
     // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    var countDownDate = new Date("Dec 22, 2022 00:00:00").getTime();
     // Update the count down every 1 second
     var x = setInterval(function () {
       // Get today's date and time
@@ -1166,10 +1190,7 @@ export default {
     onplayVideo() {
       this.play_video = true;
     },
-    onSubmit(event) {
-      event.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
+
     onReset(event) {
       event.preventDefault();
       // Reset our form values
@@ -1186,6 +1207,7 @@ export default {
     },
     onSuccess() {
       console.log("success");
+      this.$root.$bvToast.show("toast-email-saved");
     },
   },
 };
