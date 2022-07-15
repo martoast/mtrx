@@ -29,7 +29,6 @@
           </b-nav-item> -->
         </b-navbar-nav>
         <b-navbar-nav class="d-none d-md-flex ml-auto">
-
           <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
             <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
           </a>
@@ -127,7 +126,7 @@
             <div class="p-2">
               <b-img-lazy
                 style="border-radius: 300px; max-height: 418px; width: 590px"
-                src="/images/pool.jpg"
+                src="/images/second-flamingo.png"
                 fluid
                 alt="Responsive image"
               ></b-img-lazy>
@@ -324,7 +323,7 @@
           <div class="p-2">
             <b-img-lazy
               style="border-radius: 300px; max-height: 418px; width: 590px"
-              src="/images/pool.jpg"
+              src="/images/second-flamingo.png"
               fluid
               alt="Responsive image"
             ></b-img-lazy>
@@ -416,7 +415,7 @@
             </b-col>
 
             <b-col class="ml-auto py-3" cols="12" md="4" sm="12">
-              <MLogo style="width: 230px;" />
+              <MLogo style="width: 230px" />
               <!-- <b-img-lazy
                 src="/images/banner-logo.svg"
                 fluid
@@ -1020,7 +1019,6 @@
     </b-container>
 
     <div class="d-flex justify-content-center pb-4">
-
       <a class="px-2" href="//instagram.com/mtrx_verse" target="_blank">
         <b-img-lazy src="/images/social/instagram.svg"></b-img-lazy>
       </a>
