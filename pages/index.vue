@@ -76,10 +76,24 @@
         >
         </b-img-lazy>
         <b-button
+          class="d-none d-md-block"
           style="
             position: absolute;
             bottom: 50%;
-            left: 48%;
+            left: 47%;
+            background-color: rgba(7, 252, 252, 1);
+          "
+          size="lg"
+          @click="onplayVideo"
+        >
+          <b-icon icon="play-fill" scale="2"> </b-icon>
+        </b-button>
+        <b-button
+          class="d-block d-md-none"
+          style="
+            position: absolute;
+            bottom: 43%;
+            left: 41%;
             background-color: rgba(7, 252, 252, 1);
           "
           size="lg"
