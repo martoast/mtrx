@@ -70,7 +70,7 @@
     >
       <div v-if="!play_video">
         <b-img-lazy
-          src="/videos/mainvideo.gif"
+          src="/images/mainimage.png"
           fluid
           style="position: relative; max-height: 592px; width: 100%"
         >
