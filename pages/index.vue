@@ -79,7 +79,7 @@
           style="
             position: absolute;
             bottom: 50%;
-            left: 50%;
+            left: 48%;
             background-color: rgba(7, 252, 252, 1);
           "
           size="lg"
