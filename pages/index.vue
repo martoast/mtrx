@@ -2,11 +2,6 @@
   <b-container>
     <b-navbar toggleable="lg" type="dark" style="background-color: #000000">
       <b-navbar-brand href="#">
-        <!-- <img
-          src="/images/small-logo.svg"
-          class="d-inline-block align-top"
-          alt="logo "
-        /> -->
         <MtrxLogo style="height: 60px" />
       </b-navbar-brand>
 
@@ -75,7 +70,7 @@
     >
       <div v-if="!play_video">
         <b-img-lazy
-          src="/images/header.png"
+          src="/videos/mainvideo.gif"
           fluid
           style="position: relative; max-height: 592px; width: 100%"
         >
@@ -83,8 +78,8 @@
         <b-button
           style="
             position: absolute;
-            bottom: 49%;
-            left: 35%;
+            bottom: 50%;
+            left: 50%;
             background-color: rgba(7, 252, 252, 1);
           "
           size="lg"
@@ -103,6 +98,7 @@
           controls
           playsinline
           webkit-playsinline
+          loop
         >
           <source src="/videos/mainvideo.mp4" type="video/mp4" preload="auto" />
           Your browser does not support video
